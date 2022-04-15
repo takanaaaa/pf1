@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import "../../common/css/_common.scss";
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+
+  .newsCard {
+    // font-family: "游ゴシック体";
+    border-bottom: 1px dotted;
+    position: relative;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      opacity: 0;
+      transition: .5s;
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+      border-left: 3px solid $orange;
+      border-top: 3px solid $orange;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      border-right: 3px solid $orange;
+      border-bottom: 3px solid $orange;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      height: 5em;
+      width: 5em;
+      opacity: 1;
+    }
+  
+    .newsCard__date {
+      // font-size: 12px;
+    }
+  
+    .newsCard__ttl {
+      display: inline-block;
+      // font-size: 17px;
+    }
+  
+    .newsCard__text {
+      // font-size: 14px;
+    }
+  
+    .newsCard__more {
+      font-size: 13px;
+      // font-family: Helvetica;
+      font-weight: bold;
+      color: $orange;
+  
+      &::before {
+        content: "->";
+      }
+    }
+  }
+}
+

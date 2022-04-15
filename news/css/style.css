@@ -1,0 +1,136 @@
+body {
+  background: #f8e9d2;
+}
+
+footer {
+  padding-top: 65px;
+  padding-bottom: 90px;
+  text-align: center;
+  background: #808080;
+  color: #fff;
+}
+
+footer .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 90px;
+  color: #fff;
+}
+
+footer .nav__list .nav__list--item {
+  position: relative;
+}
+
+footer .nav__list .nav__list--item a,
+footer .nav__list .nav__list--item span {
+  margin-left: 10px;
+}
+
+footer .nav__list .nav__list--item a span,
+footer .nav__list .nav__list--item span span {
+  display: block;
+  font-family: 'Bookman Old Style';
+  font-size: 14.25px;
+}
+
+footer .nav__list .nav__list--item::before {
+  content: "";
+  width: 2px;
+  height: 35px;
+  display: block;
+  position: absolute;
+  background: #fff;
+}
+
+footer .nav__list .nav__list--item::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 20%;
+  background: #ea5413;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .nav__list .nav__list--item:hover:after {
+  width: 90%;
+}
+
+footer .copyright {
+  font-size: 11px;
+}
+
+footer .toTop {
+  border-right: 100px solid transparent;
+  border-bottom: 91px solid #fff;
+  border-left: 100px solid transparent;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.cards .newsCard {
+  border-bottom: 1px dotted;
+  position: relative;
+  cursor: pointer;
+}
+
+.cards .newsCard::before, .cards .newsCard::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cards .newsCard::before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid #ea5413;
+  border-top: 3px solid #ea5413;
+}
+
+.cards .newsCard::after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid #ea5413;
+  border-bottom: 3px solid #ea5413;
+}
+
+.cards .newsCard:hover::before, .cards .newsCard:hover::after {
+  height: 5em;
+  width: 5em;
+  opacity: 1;
+}
+
+.cards .newsCard .newsCard__ttl {
+  display: inline-block;
+}
+
+.cards .newsCard .newsCard__more {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ea5413;
+}
+
+.cards .newsCard .newsCard__more::before {
+  content: "->";
+}
+/*# sourceMappingURL=style.css.map */
