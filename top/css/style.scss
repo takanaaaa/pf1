@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@import "../../common/css/_common.scss";
+
+
+nav {
+  width: 420px;
+  height: 100vh;
+  background: $gray;
+  position: fixed;
+  text-align: center;
+  font-size: 20px; // ?
+  color: $white;
+  z-index: 1;
+  display: none;
+  
+  .logo {
+    width: 207px;
+  }
+  
+  .nav__list {
+  //  line-height: ;
+}
+
+  .copyright {
+    font-size: 11px;
+  }
+}
+
+section {
+  .header {
+    width: 100vw;
+    height: 450px;
+    background: $orange;
+    color: $white;
+    position: relative;
+
+    .headerText {
+      position: absolute;
+      top: 50%;
+      transform: translate(165px, -50%);
+      background: $orange;
+
+      &__ttl {
+        font-size: 110px;
+        // font-family: [KaiminSoStd];
+      }
+
+      &__ttl--sub {
+        font-size: 40px;
+        // font-family: Bookman Old Style;
+        font-weight: bold;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        color: $white;
+        border-style: solid;
+        border-left-width: 4px;
+        border-bottom-width: 140px;
+        left: 10px;
+        top: -105%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        color: $white;
+        border-style: solid;
+        border-left-width: 4px;
+        border-bottom-width: 140px;
+        left: 10px;
+        bottom: -105%;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+
+    .box {
+      flex-basis: 50%;
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 13px 50px 13px 63px;
+        background: $orange;
+        color: $white;
+        font-family: "游ゴシック体";
+        font-size: 16px;
+        text-align: center;
+
+        &::after {
+          content: "ー＞";
+        }
+      }
+    }
+  }
+}
+
+.news {
+  .news__ttl {
+    color: $orange;
+  }
+
+  .newsBox {
+    font-family: "游ゴシック体";
+    border-bottom: 1px dotted;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+    .newsBox__date {
+      font-size: 12px;
+    }
+  
+    .newsBox__ttl {
+      display: inline-block;
+      font-size: 17px;
+      color: $white;
+      background: $orange;
+    }
+  
+    .newsBox__text {
+      font-size: 14px;
+    }
+  
+    .newsBox__more {
+      font-size: 13px;
+      font-family: Helvetica;
+      font-weight: bold;
+      color: $orange;
+
+    }
+  }
+}
+
+.greeting {
+  .greeting__ttl {
+    color: $orange;
+  }
+
+  .greeting__ttl--sub {
+    font-size: 20px;
+    // font-family: 'Bookman Old Style';
+    font-weight: bold;
+  }
+
+  .greeting__text {
+    font-size: 14px;
+    font-family: "游ゴシック体";
+    // line-height: ;
+  }
+
+}
+
+.outline {
+
+}
+
+.branding {
+
+}
+
+.recruit {
+
+}
+
+
