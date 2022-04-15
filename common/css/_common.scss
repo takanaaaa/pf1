@@ -10,5 +10,67 @@ body {
 }
 
 footer {
+  padding-top: 65px;
+  padding-bottom: 90px;
+  text-align: center;
   background: $gray;
+  color: $white;
+
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 90px;
+    color: $white;
+
+    .nav__list--item {
+      position: relative;
+
+      a,
+      span {
+        margin-left: 10px;
+  
+        span {
+          display: block;
+          font-family: 'Bookman Old Style';
+          font-size: 14.25px;
+        }
+      }
+  
+      &::before {
+        content: "";
+        width: 2px;
+        height: 35px;
+        display: block;
+        position: absolute;
+        background: #fff;
+      }
+  
+      &::after {
+        content: "";
+        width: 0%;
+        height: 3px;
+        display: block;
+        position: absolute;
+        top: 20%;
+        background: $orange;
+        transform: translateX(10px);
+        transition: .5s;
+
+      }
+      &:hover:after {
+        width: 90%;
+      }
+    }
+
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+
+  .toTop {
+    border-right: 100px solid transparent;
+    border-bottom: 91px solid $white;
+    border-left: 100px solid transparent; 
+  }
 }
