@@ -1,0 +1,70 @@
+body {
+  background: #f8e9d2;
+}
+
+footer {
+  padding-top: 65px;
+  padding-bottom: 90px;
+  text-align: center;
+  background: #808080;
+  color: #fff;
+}
+footer .nav__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 90px;
+  color: #fff;
+}
+footer .nav__list .nav__list--item {
+  position: relative;
+}
+footer .nav__list .nav__list--item a,
+footer .nav__list .nav__list--item span {
+  margin-left: 10px;
+}
+footer .nav__list .nav__list--item a span,
+footer .nav__list .nav__list--item span span {
+  display: block;
+  font-family: "Bookman Old Style";
+  font-size: 14.25px;
+}
+footer .nav__list .nav__list--item::before {
+  content: "";
+  width: 2px;
+  height: 35px;
+  display: block;
+  position: absolute;
+  background: #fff;
+}
+footer .nav__list .nav__list--item::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 20%;
+  background: #ea5413;
+  transform: translateX(10px);
+  transition: 0.5s;
+}
+footer .nav__list .nav__list--item:hover:after {
+  width: 90%;
+}
+footer .copyright {
+  font-size: 11px;
+}
+footer .toTop {
+  border-right: 100px solid transparent;
+  border-bottom: 91px solid #fff;
+  border-left: 100px solid transparent;
+}
+
+.service ul {
+  display: grid;
+  grid-template-columns: repeat(2, 455px);
+}
+.service ul .serviceBox {
+  padding: 20px 30px;
+  border: 1px solid #ea5413;
+}
+/*# sourceMappingURL=style.css.map */
