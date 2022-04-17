@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import "../../common/css/_common.scss";
+
+.logoBox {
+  width: 513px;
+  padding-top: 60px;
+  padding-bottom: 32px;
+  background: $orange;
+  color: $white;
+  text-align: center;
+
+  .logoBox__img{
+    display: block;
+    margin: 0 auto 35px;
+  }
+
+   button {
+     padding: 10px 40px;
+     border: 1px solid $white;
+     font-family: "游ゴシック体";
+     font-size: 13px;
+     position: relative;
+     overflow: hidden;
+
+     &::before {
+       content: "";
+       position: absolute;
+       background: $white;
+       width: 184px;
+       height: 36.95px;
+       top: 0;
+       left: 0;
+       transform: translateX(-100%);
+       transition: 3s;
+     }
+
+     &:hover:before {
+       transform: translateX(0);
+       color: $orange;
+     }
+   }
+}
+
+.modal {
+  width: 890px;
+  padding: 63px 125px 86px;
+  background: #fffefd;
+  box-shadow: 5px 5px 5px #beb4a6;
+
+  .modal__text{
+    color: $orange;
+    font-family: "游ゴシック";
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+.timeline li {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 12px;
+  display: flex;
+
+  .timeline__year {
+    color: $orange;
+    width: 50px;
+
+    &::after {
+      content: "";
+      width: 5px;
+      height: 55%;
+      background: #000;
+      position: absolute;
+      left: 10px;
+      top: 17px;
+
+    }
+  }
+
+  &:last-of-type .timeline__year::after {
+    display: none;
+  }
+
+  .timeline__mon {
+    display: inline-block;
+    width: 50px;
+    text-align: end;
+  }
+}
