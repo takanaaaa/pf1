@@ -1,0 +1,169 @@
+@charset "UTF-8";
+body {
+  background: #f8e9d2;
+}
+
+footer {
+  padding-top: 65px;
+  padding-bottom: 90px;
+  text-align: center;
+  background: #808080;
+  color: #fff;
+}
+
+footer .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 90px;
+  color: #fff;
+}
+
+footer .nav__list .nav__list--item {
+  position: relative;
+}
+
+footer .nav__list .nav__list--item a,
+footer .nav__list .nav__list--item span {
+  margin-left: 10px;
+}
+
+footer .nav__list .nav__list--item a span,
+footer .nav__list .nav__list--item span span {
+  display: block;
+  font-family: 'Bookman Old Style';
+  font-size: 14.25px;
+}
+
+footer .nav__list .nav__list--item::before {
+  content: "";
+  width: 2px;
+  height: 35px;
+  display: block;
+  position: absolute;
+  background: #fff;
+}
+
+footer .nav__list .nav__list--item::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 20%;
+  background: #ea5413;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .nav__list .nav__list--item:hover:after {
+  width: 90%;
+}
+
+footer .copyright {
+  font-size: 11px;
+}
+
+footer .toTop {
+  border-right: 100px solid transparent;
+  border-bottom: 91px solid #fff;
+  border-left: 100px solid transparent;
+}
+
+.logoBox {
+  width: 513px;
+  padding-top: 60px;
+  padding-bottom: 32px;
+  background: #ea5413;
+  color: #fff;
+  text-align: center;
+}
+
+.logoBox .logoBox__img {
+  display: block;
+  margin: 0 auto 35px;
+}
+
+.logoBox button {
+  padding: 10px 40px;
+  border: 1px solid #fff;
+  font-family: "游ゴシック体";
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoBox button::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 184px;
+  height: 36.95px;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.logoBox button:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  color: #ea5413;
+}
+
+.modal {
+  width: 890px;
+  padding: 63px 125px 86px;
+  background: #fffefd;
+  -webkit-box-shadow: 5px 5px 5px #beb4a6;
+          box-shadow: 5px 5px 5px #beb4a6;
+}
+
+.modal .modal__text {
+  color: #ea5413;
+  font-family: "游ゴシック";
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.timeline li {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.timeline li .timeline__year {
+  color: #ea5413;
+  width: 50px;
+}
+
+.timeline li .timeline__year::after {
+  content: "";
+  width: 5px;
+  height: 55%;
+  background: #000;
+  position: absolute;
+  left: 10px;
+  top: 17px;
+}
+
+.timeline li:last-of-type .timeline__year::after {
+  display: none;
+}
+
+.timeline li .timeline__mon {
+  display: inline-block;
+  width: 50px;
+  text-align: end;
+}
+/*# sourceMappingURL=style.css.map */
