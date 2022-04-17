@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import "../../common/css/_common.scss";
+
+.service ul {
+  display: grid;
+  grid-template-columns: repeat(2, 455px);
+
+  .serviceBox {
+    padding: 20px 30px;
+    border: 1px solid $orange;
+  }
+}
