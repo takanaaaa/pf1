@@ -15,12 +15,13 @@
   }
 
    button {
+     position: relative;
      padding: 10px 40px;
      border: 1px solid $white;
      font-family: "游ゴシック体";
      font-size: 13px;
-     position: relative;
      overflow: hidden;
+     transition: .5s;
 
      &::before {
        content: "";
@@ -31,11 +32,21 @@
        top: 0;
        left: 0;
        transform: translateX(-100%);
-       transition: 3s;
+       transition: .5s;
      }
 
      &:hover:before {
        transform: translateX(0);
+       color: $orange;
+       z-index: 2;
+     }
+
+     & p {
+       position: relative;
+       z-index: 3;
+     }
+
+     &:hover {
        color: $orange;
      }
    }
