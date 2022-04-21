@@ -1,13 +1,107 @@
+@charset "UTF-8";
 body {
+  min-width: 1280px;
+  overflow-x: hidden;
   background: #f8e9d2;
+  font-family: 'Yu Gothic','YuGothic','Noto Sans Japanese','Helvetica Neue','ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN',Arial,'Meiryo',sans-serif;
+  line-height: 1.5;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 30px;
+  cursor: pointer;
+}
+
+.hamburger__line {
+  background-color: #ea5413;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.line2 {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.line3 {
+  bottom: 0;
+}
+
+.line_1,
+.line_2,
+.line_3 {
+  background-color: #fff;
+}
+
+.line_1 {
+  width: 60%;
+  -webkit-transform: translateY(5px) rotate(-45deg);
+          transform: translateY(5px) rotate(-45deg);
+}
+
+.line_3 {
+  width: 60%;
+  -webkit-transform: translateY(-5px) rotate(45deg);
+          transform: translateY(-5px) rotate(45deg);
+}
+
+.nav {
+  width: 420px;
+  height: 100vh;
+  background: #808080;
+  position: fixed;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  z-index: 1;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.nav .logo {
+  width: 207px;
+  margin: 45px 0 55px;
+}
+
+.nav .list__item a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(../../common/img/nav_home.png) no-repeat center center/cover;
+}
+
+.nav .copyright {
+  font-size: 11px;
+}
+
+.nav.in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 footer {
   padding-top: 65px;
-  padding-bottom: 90px;
+  padding-bottom: 95px;
   text-align: center;
   background: #808080;
   color: #fff;
+}
+
+footer .icon {
+  margin-bottom: 40px;
 }
 
 footer .nav__list {
@@ -17,36 +111,31 @@ footer .nav__list {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 90px;
+  margin: 0 90px 40px;
   color: #fff;
+  text-align: start;
 }
 
-footer .nav__list .nav__list--item {
+footer .nav__list .nav__item {
   position: relative;
 }
 
-footer .nav__list .nav__list--item a,
-footer .nav__list .nav__list--item span {
-  margin-left: 10px;
-}
-
-footer .nav__list .nav__list--item a span,
-footer .nav__list .nav__list--item span span {
+footer .nav__list .nav__item span {
   display: block;
   font-family: 'Bookman Old Style';
   font-size: 14.25px;
 }
 
-footer .nav__list .nav__list--item::before {
+footer .nav__list .nav__item::before {
   content: "";
-  width: 2px;
+  width: 1px;
   height: 35px;
-  display: block;
   position: absolute;
   background: #fff;
+  left: -15px;
 }
 
-footer .nav__list .nav__list--item::after {
+footer .nav__list .nav__item::after {
   content: "";
   width: 0%;
   height: 3px;
@@ -54,14 +143,23 @@ footer .nav__list .nav__list--item::after {
   position: absolute;
   top: 20%;
   background: #ea5413;
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-footer .nav__list .nav__list--item:hover:after {
-  width: 90%;
+footer .nav__list .nav__item:hover:after {
+  width: 100%;
+}
+
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 25px;
+  margin-bottom: 28px;
 }
 
 footer .copyright {
@@ -70,7 +168,7 @@ footer .copyright {
 
 footer .toTop {
   border-right: 100px solid transparent;
-  border-bottom: 91px solid #fff;
+  border-bottom: 99px solid #fff;
   border-left: 100px solid transparent;
 }
 
