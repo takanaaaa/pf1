@@ -6,43 +6,124 @@ $orange: #ea5413;
 $gray: #808080;
 
 body {
+  min-width: 1280px;
+  overflow-x: hidden;
   background: $mainColor;
+  font-family: 'Yu Gothic','YuGothic','Noto Sans Japanese','Helvetica Neue','ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN',Arial,'Meiryo',sans-serif;
+  line-height: 1.5;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  cursor: pointer;
+}
+
+.hamburger__line {
+  background-color: $orange;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  transition: 1s;
+}
+
+.line2 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line3 {
+  bottom: 0;
+}
+
+.line_1,
+.line_2,
+.line_3 {
+  background-color: $white;
+}
+
+.line_1 {
+  width: 60%;
+  transform: translateY(5px) rotate(-45deg);
+}
+
+.line_3 {
+  width: 60%;
+  transform: translateY(-5px) rotate(45deg);
+}
+
+.nav {
+  width: 420px;
+  height: 100vh;
+  background: $gray;
+  position: fixed;
+  text-align: center;
+  font-size: 14px;
+  color: $white;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: 1s;
+  
+  .logo {
+    width: 207px;
+    margin: 45px 0 55px;
+  }
+
+  .list__item a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../../common/img/nav_home.png) no-repeat center center/cover;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+
+  &.in {
+    transform: translateX(0);
+  }
 }
 
 footer {
   padding-top: 65px;
-  padding-bottom: 90px;
+  padding-bottom: 95px;
   text-align: center;
   background: $gray;
   color: $white;
 
+  .icon {
+    margin-bottom: 40px;
+  }
+
   .nav__list {
     display: flex;
     justify-content: space-between;
-    margin: 0 90px;
+    margin: 0 90px 40px;
     color: $white;
+    text-align: start;
 
-    .nav__list--item {
+    .nav__item {
       position: relative;
 
-      a,
       span {
-        margin-left: 10px;
-  
-        span {
-          display: block;
-          font-family: 'Bookman Old Style';
-          font-size: 14.25px;
-        }
+        display: block;
+        font-family: 'Bookman Old Style';
+        font-size: 14.25px;
       }
   
       &::before {
         content: "";
-        width: 2px;
+        width: 1px;
         height: 35px;
-        display: block;
         position: absolute;
         background: #fff;
+        left: -15px;
       }
   
       &::after {
@@ -53,15 +134,20 @@ footer {
         position: absolute;
         top: 20%;
         background: $orange;
-        transform: translateX(10px);
         transition: .5s;
 
       }
       &:hover:after {
-        width: 90%;
+        width: 100%;
       }
     }
+  }
 
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 28px;
   }
 
   .copyright {
@@ -70,7 +156,7 @@ footer {
 
   .toTop {
     border-right: 100px solid transparent;
-    border-bottom: 91px solid $white;
+    border-bottom: 99px solid $white;
     border-left: 100px solid transparent; 
   }
 }
