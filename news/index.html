@@ -16,14 +16,48 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="hamburger" id="hamburger">
+    <span class="hamburger__line line1" id="js-line1"></span>
+    <span class="hamburger__line line2" id="js-line2"></span>
+    <span class="hamburger__line line3" id="js-line3"></span>
+  </div>
+  <nav id="nav" class="nav">
+    <img src="../common/img/logo.png" alt="ロゴ" class="logo">
+    <ul class="list">
+      <li class="list__item">
+        <a href="">ホーム</a>
+      </li>
+      <li class="list__item">新着情報</li>
+      <li class="list__item">代表挨拶</li>
+      <li class="list__item">企業情報</li>
+      <li class="list__item">事業紹介</li>
+      <li class="list__item">採用情報</li>
+      <li class="list__item">問い合わせ</li>
+    </ul>
+    <ul class="social">
+      <li class="social__icon">
+        <i></i>
+        <img src="" alt="インスタグラムアイコン">
+      </li>
+      <li class="social__icon">
+        <i></i>
+        <img src="" alt="フェイスブックアイコン">
+      </li>
+    </ul>
+    <p class="privacy">プライバシーポリシー</p>
+    <p class="copyright">
+      ©YOSHIDA&ensp;AUTO&ensp;SERVICE&ensp;All&ensp;Rights&ensp;Reserved.
+    </p>
+  </nav>
   <header>
-    <h1>新着情報</h1>
+    <h1 class="ttl"></h1>
+    <p class="subTtl"></p>
   </header>
   <main>
     <ul class="cards">
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -33,8 +67,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -44,8 +78,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -55,8 +89,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -66,8 +100,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -77,8 +111,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -88,8 +122,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -99,8 +133,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -110,8 +144,8 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
       <li class="newsCard">
-        <img src="" alt="ニュースイメージ">
-        <p class="newsCard__date">2018.11.28</p>
+        <div class="newsCard__img"></div>
+        <small class="newsCard__date">2018.11.28</small>
         <h3 class="newsCard__ttl">
           ここにはニュースのタイトルが入ります
         </h3>
@@ -121,10 +155,13 @@
         <p class="newsCard__more">READ&ensp;MORE</p>
       </li>
     </ul>
-    <button>BACK</button>
+    <button>
+      <p></p>
+    </button>
+    <div class="bg"></div>
   </main>
   <footer>
-    <img src="" alt="ロゴ" class="icon">
+    <img src="../common/img/logoFooter.png" alt="ロゴ" class="icon">
     <ul class="nav__list">
       <li class="nav__list--item">
         <a href="">ホーム<span>Home</span></a>
@@ -164,5 +201,8 @@
     </p>
     <a href="" class="toTop"></a>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../common/js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
