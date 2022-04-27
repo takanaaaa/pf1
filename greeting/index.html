@@ -16,47 +16,107 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
+  <div class="hamburger" id="hamburger">
+    <span class="hamburger__line line1" id="js-line1"></span>
+    <span class="hamburger__line line2" id="js-line2"></span>
+    <span class="hamburger__line line3" id="js-line3"></span>
+  </div>
+  <nav id="nav" class="nav">
+    <img src="../common/img/logo.png" alt="ロゴ" class="logo">
+    <ul class="list">
+      <li class="list__item">
+        <a href="">ホーム</a>
+      </li>
+      <li class="list__item">新着情報</li>
+      <li class="list__item">代表挨拶</li>
+      <li class="list__item">企業情報</li>
+      <li class="list__item">事業紹介</li>
+      <li class="list__item">採用情報</li>
+      <li class="list__item">問い合わせ</li>
+    </ul>
+    <ul class="social">
+      <li class="social__icon">
+        <i></i>
+        <img src="" alt="インスタグラムアイコン">
+      </li>
+      <li class="social__icon">
+        <i></i>
+        <img src="" alt="フェイスブックアイコン">
+      </li>
+    </ul>
+    <p class="privacy">プライバシーポリシー</p>
+    <p class="copyright">
+      ©YOSHIDA&ensp;AUTO&ensp;SERVICE&ensp;All&ensp;Rights&ensp;Reserved.
+    </p>
+  </nav>
   <main>
     <section class="greeting">
-      <header>
-        <h1>代表挨拶</h1>
+      <header class="header">
+        <h2 class="ttl"></h2>
+        <p class="subTtl"></p>
       </header>
-      <div class="greetingBox">
-        <img src="" alt="代表写真"class="greetingBox__img">
-      </div>
-      <div class="greetingBox">
-        <h2 class="greetingBox__ttl">代表挨拶</h2>
-        <p class="greetingBox__text">
-          あああ
-        </p>
-        <p class="greetingBox__text">
-          代表取締役&ensp;吉田&ensp;宜史&ensp;Yoshida&ensp;Takashi
-        </p>
+      <div class="container">
+        <div class="col__left">
+          <img src="../common/img/greeting/greetingImg_01.png" alt="代表写真" class="greetingBox__img">
+        </div>
+        <div class="col__right">
+          <h2 class="greetingBox__ttl">代表挨拶</h2>
+          <p class="greetingBox__text">
+            私の幼少時代、やっと言葉が話せるようになったぐらいの頃、<br>
+            みんなが豊かで幸せだった時代です。<br>
+            社員は自分の仕事と会社に誇りを持ち、<br>
+            会社は社員を家族のように大切にしていました。<br>
+            お客様一人一人と心の通うお付き合いをし、<br>
+            お客様に起こったことはまるで自分のことのように親身になっていました。<br>
+            効率を追求する成果主義に日本的経営が席巻されている今、<br>
+            懐古的な理想論の様に聞こえると思いますが、<br>
+            経営の最終ゴールは人を幸せにすることに尽きると思います。<br>
+            人間の温もりや人間臭さを大切にし、<br>
+            組織の連帯感を大きくし続けることができるのであれば、<br>
+            理想を実現させることも可能でしょう。<br>
+            喜びややりがい、時には苦労を共に分かち合える家族のような会社、<br>
+            昔の商店のような人と人とのつながりを大切にする会社、<br>
+            地域の車の『かかりつけ医』となる会社、<br>
+            こんな会社を創りたいと目標を持ったのが私の創業の原点です。
+          </p>
+          <p class="greetingBox__text">
+            代表取締役&ensp;吉田&ensp;宜史&ensp;Yoshida&ensp;Takashi
+          </p>
+        </div>
       </div>
     </section>
     <section class="philosophy">
-        <h1>経営理念</h1>
-        <img src="" alt="経営理念写真">
-        <p>地域・社員と共に生き、共に育つ</p>
+      <h2 class="ttl"></h2>
+      <p class="subTtl"></p>
+      <img src="../common/img/greeting/greetingImg_02.png" alt="経営理念写真">
+      <div class="bg"></div>
+      <p>地域・社員と共に生き、共に育つ</p>
     </section>
     <section class="management">
-      <h1>経営方針</h1>
-      <img src="" alt="経営方針写真">
+      <h2 class="ttl"></h2>
+      <p class="subTtl"></p>
+      <img src="../common/img/greeting/greetingImg_03.png" alt="経営方針写真">
       <p>
         南大阪の自動車ユーザにワンストップサービス、<br>
         バリューチェーンを構築し、安心・快適・感動を提供する
       </p>
     </section>
     <section class="vision">
-      <h1>ビジョン</h1>
-      <img src="" alt="ビジョン写真">
+      <h2 class="ttl"></h2>
+      <p class="subTtl"></p>
+      <img src="../common/img/greeting/greetingImg_04.png" alt="ビジョン写真">
+      <div class="bg"></div>
       <p>
         自動車業界に先見的で卓越した大きなインパクトを起こし、<br>
         自動車という地域のインフラに消える事のない奇跡を刻み、<br>
         反映し続ける。
       </p>
     </section>
-    <button>BACK</button>
+    <button>
+      <p></p>
+    </button>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
   </main>
   <footer>
     <img src="" alt="ロゴ" class="icon">
@@ -99,5 +159,8 @@
     </p>
     <a href="" class="toTop"></a>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../common/js/main.js"></script>
+	<!-- <script src="js/main.js"></script> -->
 </body>
 </html>

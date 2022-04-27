@@ -14,7 +14,6 @@ main {
     background: url(../../common/img/news/bg.png) no-repeat;
     z-index: -1;
   }
-  
 }
 
 header {
@@ -31,13 +30,12 @@ header {
 
     &::before {
       content: "";
-      width: calc(740px);
+      width: 740px;
       height: 45px;
       display: block;
       transform: translateX(260px);
       background-image: repeating-linear-gradient(-45deg, $orange, $orange .6px, transparent 0, transparent 6.6px);
     }
-
   }
 
   .subTtl {
