@@ -1,4 +1,33 @@
 @charset "UTF-8";
+.greeting .header .ttl, .philosophy .ttl, .management .ttl, .vision .ttl {
+  position: absolute;
+  background: no-repeat;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-size: contain;
+}
+
+.greeting .header .subTtl, .philosophy .subTtl, .management .subTtl, .vision .subTtl {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 55px;
+  background: no-repeat;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 165px;
+  background-size: contain;
+}
+
+.greeting .header .ttl::before, .philosophy .ttl::before, .management .ttl::before, .vision .ttl::before {
+  content: "";
+  height: 45px;
+  display: block;
+  background-image: repeating-linear-gradient(-45deg, #ea5413, #ea5413 0.6px, transparent 0, transparent 6.6px);
+}
+
 body {
   min-width: 1280px;
   overflow-x: hidden;
@@ -91,6 +120,32 @@ body {
           transform: translateX(0);
 }
 
+button {
+  width: 100%;
+  position: relative;
+  display: block;
+  width: 78%;
+  height: 45px;
+  margin: 0 auto;
+}
+
+button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  top: 0%;
+  background-image: repeating-linear-gradient(-45deg, #ea5413, #ea5413 0.6px, transparent 0, transparent 6.6px);
+}
+
+button p {
+  display: block;
+  height: 100%;
+  background: url(../../common/img/backButton.png) no-repeat;
+  background-position: 50%;
+}
+
 footer {
   padding-top: 65px;
   padding-bottom: 95px;
@@ -169,5 +224,191 @@ footer .toTop {
   border-right: 100px solid transparent;
   border-bottom: 99px solid #fff;
   border-left: 100px solid transparent;
+}
+
+main {
+  position: relative;
+  padding: 225px 140px 190px 140px;
+}
+
+main .bg1,
+main .bg2 {
+  position: absolute;
+  z-index: -1;
+}
+
+main .bg1 {
+  background: url(../../common/img/greeting/bg_01.png) no-repeat;
+  top: 0;
+  left: 0;
+  width: 670px;
+  height: 135px;
+}
+
+main .bg2 {
+  background: url(../../common/img/greeting/bg_02.png) no-repeat;
+  bottom: 0;
+  right: 0%;
+  width: 852px;
+  height: 105px;
+}
+
+.greeting {
+  margin-bottom: 195px;
+}
+
+.greeting .header {
+  position: relative;
+  margin-bottom: 107px;
+}
+
+.greeting .header .ttl {
+  width: 230px;
+  background-image: url(../../common/img/greeting/ttl_01.png);
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.greeting .header .ttl::before {
+  width: 745px;
+  -webkit-transform: translateX(255px);
+          transform: translateX(255px);
+}
+
+.greeting .header .subTtl {
+  width: 95px;
+  right: 15px;
+  background-image: url(../../common/img/greeting/subTtl_01.png);
+}
+
+.greeting .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.greeting .container .greetingBox__text {
+  margin: 35px 0 20px 0;
+}
+
+.philosophy {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.philosophy .ttl {
+  width: 230px;
+  margin-bottom: 42px;
+  background-image: url(../../common/img/greeting/ttl_02.png);
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.philosophy .ttl::before {
+  width: 745px;
+  -webkit-transform: translateX(255px);
+          transform: translateX(255px);
+}
+
+.philosophy .subTtl {
+  width: 115px;
+  right: 130px;
+  background-image: url(../../common/img/greeting/subTtl_02.png);
+  top: 24px;
+}
+
+.philosophy img {
+  position: absolute;
+  top: -70%;
+  right: -95px;
+  z-index: 1;
+}
+
+.philosophy .bg {
+  width: 350px;
+  height: 235px;
+  top: 55%;
+  right: -60px;
+  background-color: rgba(234, 85, 20, 0.1);
+  position: absolute;
+}
+
+.management {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.management .ttl {
+  width: 230px;
+  margin-bottom: 42px;
+  background-image: url(../../common/img/greeting/ttl_03.png);
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.management .ttl::before {
+  width: 650px;
+  -webkit-transform: translateX(255px);
+          transform: translateX(255px);
+}
+
+.management .subTtl {
+  width: 205px;
+  right: 350px;
+  background-image: url(../../common/img/greeting/subTtl_03.png);
+  top: 24px;
+}
+
+.management img {
+  position: absolute;
+  top: -80%;
+  right: 80px;
+}
+
+.vision {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.vision .ttl {
+  width: 230px;
+  margin-bottom: 42px;
+  background-image: url(../../common/img/greeting/ttl_04.png);
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.vision .ttl::before {
+  width: 745px;
+  -webkit-transform: translateX(255px);
+          transform: translateX(255px);
+}
+
+.vision .subTtl {
+  width: 175px;
+  right: 150px;
+  background-image: url(../../common/img/greeting/subTtl_04.png);
+  top: 24px;
+}
+
+.vision img {
+  position: absolute;
+  top: -30%;
+  right: -66px;
+  z-index: 1;
+}
+
+.vision .bg {
+  width: 275px;
+  height: 170px;
+  bottom: 55px;
+  right: -140px;
+  background-color: rgba(234, 85, 20, 0.1);
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

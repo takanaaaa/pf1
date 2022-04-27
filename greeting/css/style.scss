@@ -1,3 +1,191 @@
 @charset "UTF-8";
 @import "../../common/css/_common.scss";
 
+main {
+  position: relative;
+  padding: 225px 140px 190px 140px;
+
+  .bg1,
+  .bg2 {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .bg1 {
+    background: url(../../common/img/greeting/bg_01.png) no-repeat;
+    top: 0;
+    left: 0;
+    width: 670px;
+    height: 135px;
+  }
+
+  .bg2 {
+    background: url(../../common/img/greeting/bg_02.png) no-repeat;
+    bottom: 0;
+    right: 0%;
+    width: 852px;
+    height: 105px;
+  }
+}
+
+.greeting {
+  margin-bottom: 195px;
+
+  .header {
+    position: relative;
+    margin-bottom: 107px;
+  
+    .ttl {
+      @extend %headerTtl-style;
+      width: 230px;
+      background-image: url(../../common/img/greeting/ttl_01.png);
+      position: static;
+      transform: none;
+
+      &::before {
+        @extend %diagonalLine-style;
+        width: 745px;
+        transform: translateX(255px);
+      }
+    }
+  
+    .subTtl {
+      @extend %headerSubTtl-style;
+      width: 95px;
+      right: 15px;
+      background-image: url(../../common/img/greeting/subTtl_01.png);
+    }
+  }
+  
+  .container {
+    display: flex;
+    gap: 50px;
+
+    .greetingBox__text {
+      margin: 35px 0 20px 0;
+    }
+  }
+}
+
+.philosophy {
+  position: relative;
+  margin-bottom: 80px;
+
+  .ttl {
+    @extend %headerTtl-style;
+    width: 230px;
+    margin-bottom: 42px;
+    background-image: url(../../common/img/greeting/ttl_02.png);
+    position: static;
+    transform: none;
+    
+    &::before {
+      @extend %diagonalLine-style;
+      width: 745px;
+      transform: translateX(255px);
+    }
+  }
+
+  .subTtl {
+    @extend %headerSubTtl-style;
+    width: 115px;
+    right: 130px;
+    background-image: url(../../common/img/greeting/subTtl_02.png);
+    top: 24px;
+  }
+
+  img {
+    position: absolute;
+    top: -70%;
+    right: -95px;
+    z-index: 1;
+  }
+
+  .bg {
+    width: 350px;
+    height: 235px;
+    top: 55%;
+    right: -60px;
+    background-color: rgba(234,85,20,.1);
+    position: absolute;
+  }
+}
+
+
+.management {
+  position: relative;
+  margin-bottom: 80px;
+
+  .ttl {
+    @extend %headerTtl-style;
+    width: 230px;
+    margin-bottom: 42px;
+    background-image: url(../../common/img/greeting/ttl_03.png);
+    position: static;
+    transform: none;
+
+    &::before {
+      @extend %diagonalLine-style;
+      width: 650px;
+      transform: translateX(255px);
+    }
+  }
+
+  .subTtl {
+    @extend %headerSubTtl-style;
+    width: 205px;
+    right: 350px;
+    background-image: url(../../common/img/greeting/subTtl_03.png);
+    top: 24px;
+  }
+
+  img {
+    position: absolute;
+    top: -80%;
+    right: 80px;
+  }
+}
+
+.vision {
+  position: relative;
+  margin-bottom: 80px;
+
+  .ttl {
+    @extend %headerTtl-style;
+    width: 230px;
+    margin-bottom: 42px;
+    background-image: url(../../common/img/greeting/ttl_04.png);
+    position: static;
+    transform: none;
+
+    &::before {
+      @extend %diagonalLine-style;
+      width: 745px;
+      transform: translateX(255px);
+    }
+  }
+
+  .subTtl {
+    @extend %headerSubTtl-style;
+    width: 175px;
+    right: 150px;
+    background-image: url(../../common/img/greeting/subTtl_04.png);
+    top: 24px;
+  }
+
+  img {
+    position: absolute;
+    top: -30%;
+    right: -66px;
+    z-index: 1;
+  }
+
+  .bg {
+    width: 275px;
+    height: 170px;
+    bottom: 55px;
+    right: -140px;
+    background-color: rgba(234,85,20,.1);
+    position: absolute;
+  }
+}
