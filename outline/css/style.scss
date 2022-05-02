@@ -1,7 +1,48 @@
 @charset "UTF-8";
 @import "../../common/css/_common.scss";
 
+main {
+  position: relative;
+  padding: 210px 140px 230px 140px;
+
+  .bg1,
+  .bg2 {
+    position: absolute;
+    z-index: -1;
+    background-size: contain;
+  }
+
+  .bg1 {
+    background: url(../../common/img/outline/bg_01.png) no-repeat;
+    top: 0;
+    left: 0;
+    width: 570px;
+    height: 110px;
+  }
+
+  .bg2 {
+    background: url(../../common/img/outline/bg_02.png) no-repeat;
+    bottom: 0;
+    right: 0%;
+    width: 570px;
+    height: 100px;
+  }
+
+  &::before {
+    content: "";
+    width: 540px;
+    height: 347px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(234,85,20,.1);
+  }
+}
+
 .logoBox {
+  position: absolute;
+  top: -80px;
+  right: -50px;
   width: 513px;
   padding-top: 60px;
   padding-bottom: 32px;
@@ -52,7 +93,34 @@
    }
 }
 
+.corporate {
+  position: relative;
+  padding-bottom: 128px;
+
+  .ttl {
+    height: 50px;
+    background: url(../../common/img/outline/ttl_01.png) no-repeat;
+    margin-bottom: 40px;
+
+    &::after {
+      @extend %diagonalLine-style;
+      width: 750px;
+      transform: translateX(250px);
+    }
+  }
+
+  .subTtl {
+    position: absolute;
+    height: 15px;
+    width: 190px;
+    top: 13px;
+    left: 310px;
+    background: url(../../common/img/outline/subTtl_01.png) no-repeat;
+  }
+}
+
 .modal {
+  display: none;
   width: 890px;
   padding: 63px 125px 86px;
   background: #fffefd;
@@ -65,6 +133,116 @@
     line-height: 25px;
   }
 }
+
+.outline {
+  font-size: 13px;
+  font-weight: bold;
+  
+  th {
+    width: 100px;
+  }
+}
+
+.outline tr:nth-of-type(-n + 7) {
+  td {
+    padding-bottom: 5px;
+  }
+}
+
+.outline tr:nth-of-type(n + 7) {
+  td {
+    padding-bottom: 35px;
+  }
+}
+
+.outline tr:nth-of-type(n + 12) {
+  td {
+    padding-bottom: 20px;
+  }
+}
+
+.history {
+  position: relative;
+  padding-bottom: 130px;
+
+  .ttl {
+    height: 50px;
+    background: url(../../common/img/outline/ttl_02.png) no-repeat;
+    margin-bottom: 35px;
+
+    &::after {
+      @extend %diagonalLine-style;
+      width: 830px;
+      transform: translateX(170px);
+    }
+  }
+
+  .subTtl {
+    position: absolute;
+    height: 19px;
+    width: 80px;
+    top: 13px;
+    right: 25px;
+    background: url(../../common/img/outline/subTtl_02.png) no-repeat;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 585px 416px;
+
+    .box {
+      font-size: 13px;
+      font-weight: bold;
+  
+      .history__text {
+        margin-bottom: 60px;
+      }
+    }
+
+    .historyImg:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.chart  {
+  position: relative;
+  padding-bottom: 100px;
+
+  .ttl {
+    height: 50px;
+    background: url(../../common/img/outline/ttl_03.png) no-repeat;
+    margin-bottom: 40px;
+
+    &::after {
+      @extend %diagonalLine-style;
+      width: 750px;
+      transform: translateX(250px);
+    }
+  }
+
+  .subTtl {
+    position: absolute;
+    height: 15px;
+    width: 200px;
+    top: 13px;
+    right: 25px;
+    background: url(../../common/img/outline/subTtl_03.png) no-repeat;
+  }
+
+  .container {
+    display: flex;
+    gap: 60px;
+  
+    .graph {
+      width: 510px;
+      height: 505px;
+      background-image: url(../../common/img/outline/graph.png);
+      background-size: contain;
+    }
+  }
+}
+
 
 .timeline li {
   position: relative;
