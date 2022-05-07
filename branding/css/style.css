@@ -1,4 +1,11 @@
 @charset "UTF-8";
+.service .ttl::after, .domain .ttl::after, .shops .ttl::after {
+  content: "";
+  height: 45px;
+  display: block;
+  background-image: repeating-linear-gradient(-45deg, #ea5413, #ea5413 0.6px, transparent 0, transparent 6.6px);
+}
+
 body {
   min-width: 1280px;
   overflow-x: hidden;
@@ -197,15 +204,273 @@ footer .toTop {
   border-left: 100px solid transparent;
 }
 
-.service ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (455px)[2];
-      grid-template-columns: repeat(2, 455px);
+main {
+  position: relative;
+  padding: 180px 140px 205px 140px;
+  font-weight: bold;
+  font-size: 13px;
 }
 
-.service ul .serviceBox {
+main .bg1,
+main .bg2 {
+  position: absolute;
+  z-index: -1;
+  background-size: contain;
+}
+
+main .bg1 {
+  background: url(../../common/img/branding/bg_01.png) no-repeat;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 135px;
+}
+
+main .bg2 {
+  background: url(../../common/img/branding/bg_02.png) no-repeat;
+  bottom: 0;
+  right: 0%;
+  width: 580px;
+  height: 105px;
+}
+
+.service {
+  position: relative;
+  padding-bottom: 125px;
+}
+
+.service .ttl {
+  height: 55px;
+  background: url(../../common/img/branding/ttl_01.png) no-repeat;
+  margin-bottom: 40px;
+}
+
+.service .ttl::after {
+  width: 750px;
+  -webkit-transform: translateX(250px);
+          transform: translateX(250px);
+}
+
+.service .subTtl {
+  position: absolute;
+  height: 15px;
+  width: 77px;
+  top: 13px;
+  right: 20px;
+  background: url(../../common/img/branding/subTtl_01.png) no-repeat;
+}
+
+.service .container {
+  margin-top: 57px;
+}
+
+.service .container ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (485px)[2];
+      grid-template-columns: repeat(2, 485px);
+  gap: 35px;
+}
+
+.service .container ul .serviceBox {
   padding: 20px 30px;
   border: 1px solid #ea5413;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.service .container ul .serviceBox .serviceBox__logo {
+  position: absolute;
+  top: -20px;
+  background: #f8e9d2;
+  padding: 0 10px;
+}
+
+.domain {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.domain header {
+  margin-bottom: 40px;
+}
+
+.domain .ttl {
+  height: 55px;
+  background: url(../../common/img/branding/ttl_02.png) no-repeat;
+  margin-bottom: 40px;
+}
+
+.domain .ttl::after {
+  width: 680px;
+  -webkit-transform: translateX(320px);
+          transform: translateX(320px);
+}
+
+.domain .subTtl {
+  position: absolute;
+  height: 15px;
+  width: 77px;
+  top: 13px;
+  left: 560px;
+  background: url(../../common/img/branding/subTtl_02.png) no-repeat;
+}
+
+.domain img {
+  position: absolute;
+  right: -140px;
+  top: -20px;
+}
+
+.domain__boxes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+  gap: 45px;
+}
+
+.domain__boxes::after {
+  content: "";
+  width: 450px;
+  height: 180px;
+  position: absolute;
+  top: 38%;
+  left: 50px;
+  font-size: 12px;
+  border: 15px solid rgba(234, 85, 20, 0.1);
+  z-index: -1;
+}
+
+.domain__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f8e9d2;
+}
+
+.domain::before {
+  content: "";
+  width: 426px;
+  height: 363px;
+  background-color: rgba(234, 85, 20, 0.1);
+  position: absolute;
+  top: 0;
+  right: -140px;
+  z-index: -1;
+}
+
+.shops {
+  position: relative;
+}
+
+.shops .ttl {
+  width: 235px;
+  height: 55px;
+  background: url(../../common/img/branding/ttl_03.png) no-repeat center/contain;
+  margin-bottom: 40px;
+}
+
+.shops .ttl::after {
+  width: 750px;
+  -webkit-transform: translateX(250px);
+          transform: translateX(250px);
+}
+
+.shops .subTtl {
+  position: absolute;
+  height: 15px;
+  width: 77px;
+  top: 13px;
+  right: 20px;
+  background: url(../../common/img/branding/subTtl_03.png) no-repeat;
+}
+
+.shops .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 110px;
+  margin-bottom: 200px;
+}
+
+.shops .container .shopsBox {
+  position: relative;
+  padding: 35px 15px 25px;
+  position: relative;
+  border: 2px solid #ea5514;
+}
+
+.shops .container .shopsBox__ttl {
+  position: absolute;
+  padding: 0 15px;
+  top: -14%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #f8e9d2;
+}
+
+.shops .container .shopsBox__name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.shops .container .shopsBox__address {
+  text-decoration: underline;
+}
+
+.shops .container .shopsBox__btn {
+  display: inline-block;
+  width: 130px;
+  margin: 15px 13px 15px 0;
+  position: relative;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.shops .container .shopsBox__btn a {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.shops .container ul {
+  font-size: 12px;
+}
+
+.shops .container ul li {
+  padding: 10px 0;
+  border-bottom: 1px dotted #000;
+}
+
+.shops .container ul li a {
+  padding: 10px 0 10px 20px;
+}
+
+.shops .bg {
+  position: absolute;
+  width: 440px;
+  height: 630px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../../common/img/branding/shopsBg_06.png) no-repeat center center/contain;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */
