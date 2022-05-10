@@ -26,23 +26,30 @@
     <img src="common/img/logo.png" alt="ロゴ" class="logo">
     <ul class="list">
       <li class="list__item">
-        <a href="">ホーム</a>
+        <a href="../pf1/index.html" class="list__text--1"></a>
       </li>
-      <li class="list__item">新着情報</li>
-      <li class="list__item">代表挨拶</li>
-      <li class="list__item">企業情報</li>
-      <li class="list__item">事業紹介</li>
-      <li class="list__item">採用情報</li>
-      <li class="list__item">問い合わせ</li>
+      <li class="list__item">
+        <a href="news/index.html" class="list__text--2"></a>
+      </li>
+      <li class="list__item">
+        <a href="greeting/index.html" class="list__text--3"></a>
+      </li>
+      <li class="list__item">
+        <a href="outline/index.html" class="list__text--4"></a>
+      </li>
+      <li class="list__item">
+        <a href="branding/index.html" class="list__text--5"></a>
+      </li>
+      <li class="list__item">
+        <a href="" class="list__text--6"></a>
+      </li>
     </ul>
     <ul class="social">
       <li class="social__icon">
-        <i></i>
-        <img src="" alt="インスタグラムアイコン">
+        <i class="social__twitter"></i>
       </li>
       <li class="social__icon">
-        <i></i>
-        <img src="" alt="フェイスブックアイコン">
+        <i class="social__facebook"></i>
       </li>
     </ul>
     <p class="privacy">プライバシーポリシー</p>
@@ -51,7 +58,7 @@
     </p>
   </nav>
   <main>
-    <section class="top">
+    <section class="top" id="top">
       <video src="common/img/top/top_movie.mp4" poster="" autoplay muted loop>
       </video>
       <div class="top__fonts">
@@ -82,233 +89,204 @@
       </div>
     </section>
     <section class="news">
-      <header class="header">
-        <div class="headerText">
-          <div class="headerText__ttl"></div>
-          <div class="headerText__sub"></div>
-        </div>
-      </header>
-      <div class="container">
-        <div class="col__left">
-          <h2 class="news__ttl"></h2>
-          <img src="common/img/top/newsImg_01.png" alt="外観写真" class="news__img">
-          <img src="common/img/top/newsImg_02.png" alt="内観写真" class="news__img">
-        </div>
-        <div class="col__right">
-          <div class="newsBox">
-            <p class="newsBox__date">2018.11.28</p>
-            <h3 class="newsBox__ttl">
-              ここにはニュースのタイトルが入ります
-            </h3>
-            <p class="newsBox__text">
-              ここには冒頭文が入ります。ここには冒頭文が入ります。
-              ここには冒頭文が入ります。ここには冒頭文が入ります。
-            </p>
-            <p class="newsBox__more">READ&ensp;MORE</p>
-          </div>
-          <div class="newsBox">
-            <p class="newsBox__date">2018.11.28</p>
-            <h3 class="newsBox__ttl">
-              ここにはニュースのタイトルが入ります
-            </h3>
-            <p class="newsBox__text">
-              ここには冒頭文が入ります。ここには冒頭文が入ります。
-              ここには冒頭文が入ります。ここには冒頭文が入ります。
-            </p>
-            <p class="newsBox__more">READ&ensp;MORE</p>
-          </div>
-          <div class="newsBox">
-            <p class="newsBox__date">2018.11.28</p>
-            <h3 class="newsBox__ttl">
-              ここにはニュースのタイトルが入ります
-            </h3>
-            <p class="newsBox__text">
-              ここには冒頭文が入ります。ここには冒頭文が入ります。
-              ここには冒頭文が入ります。ここには冒頭文が入ります。
-            </p>
-            <p class="newsBox__more">READ&ensp;MORE</p>
-          </div>
-          <button>
-            <p>ニュースリストへ</p>
-          </button>
-        </div>
+      <div class="col__left is_effects">
+        <h2 class="news__ttl"></h2>
+        <img src="common/img/top/newsImg_01.png" alt="外観写真" class="news__img">
+        <img src="common/img/top/newsImg_02.png" alt="内観写真" class="news__img">
       </div>
+      <ul class="col__right is_effects">
+        <li class="newsBox">
+          <a href="#">
+            <p class="newsBox__date">2018.11.28</p>
+            <h3 class="newsBox__ttl">
+              ここにはニュースのタイトルが入ります
+            </h3>
+            <p class="newsBox__text">
+              ここには冒頭文が入ります。ここには冒頭文が入ります。
+              ここには冒頭文が入ります。ここには冒頭文が入ります。
+            </p>
+            <p class="newsBox__more">READ&ensp;MORE</p>
+          </a>
+        </li>
+        <li class="newsBox">
+          <a href="#">
+            <p class="newsBox__date">2018.11.28</p>
+            <h3 class="newsBox__ttl">
+              ここにはニュースのタイトルが入ります
+            </h3>
+            <p class="newsBox__text">
+              ここには冒頭文が入ります。ここには冒頭文が入ります。
+              ここには冒頭文が入ります。ここには冒頭文が入ります。
+            </p>
+            <p class="newsBox__more">READ&ensp;MORE</p>
+          </a>
+        </li>
+        <li class="newsBox">
+          <a href="#">
+            <p class="newsBox__date">2018.11.28</p>
+            <h3 class="newsBox__ttl">
+              ここにはニュースのタイトルが入ります
+            </h3>
+            <p class="newsBox__text">
+              ここには冒頭文が入ります。ここには冒頭文が入ります。
+              ここには冒頭文が入ります。ここには冒頭文が入ります。
+            </p>
+            <p class="newsBox__more">READ&ensp;MORE</p>
+          </a>
+        </li>
+        <div class="newsBox__details">
+          <a href="news/index.html">ニュースリストへ</a>
+        </div>
+      </ul>
       <div class="bg"></div>
     </section>
     <section class="greeting">
-      <header class="header">
-        <div class="headerText">
-          <div class="headerText__ttl"></div>
-          <div class="headerText__sub"></div>
+      <div class="col__left is_effects">
+        <h2 class="greeting__ttl"></h2>
+        <p class="greeting__sub"></p>
+        <p class="greeting__text">
+          私の幼少時代、やっと言葉が話せるようになったぐらいの頃、<br>
+          みんなが豊かで幸せだった時代です。<br>
+          社員は自分の仕事と会社に誇りを持ち、<br>
+          会社は社員を家族のように大切にしていました。<br>
+          お客様一人一人と心の通うお付き合いをし、<br>
+          お客様に起こったことはまるで自分のことのように親身になっていました。
+        </p>
+        <div class="greeting__details">
+          <a href="greeting/index.html">続きを読む</a>
         </div>
-      </header>
-      <div class="container">
-        <div class="col__left">
-          <h2 class="greeting__ttl"></h2>
-          <p class="greeting__sub"></p>
-          <p class="greeting__text">
-            私の幼少時代、やっと言葉が話せるようになったぐらいの頃、<br>
-            みんなが豊かで幸せだった時代です。<br>
-            社員は自分の仕事と会社に誇りを持ち、<br>
-            会社は社員を家族のように大切にしていました。<br>
-            お客様一人一人と心の通うお付き合いをし、<br>
-            お客様に起こったことはまるで自分のことのように親身になっていました。
-          </p>
-          <button>
-           <p>続きを読む</p> 
-          </button>
-        </div>
-        <div class="col__right">
-          <img src="common/img/top/greetingImg.png" alt="代表写真">
-        </div>
+      </div>
+      <div class="col__right is_effects">
+        <img src="common/img/top/greetingImg.png" alt="代表写真">
       </div>
       <div class="bg"></div>
     </section>
     <section class="outline">
-      <header class="header">
-        <div class="headerText">
-          <h1 class="headerText__ttl"></h1>
-          <p class="headerText__sub"></p>
+      <div class="col__left is_effects">
+        <h2 class="outline__ttl"></h2>
+        <p class="outline__sub"></p>
+        <table>
+          <tr>
+            <th>会社名</th>
+            <td>株式会社&ensp;ヨシダオートサービス</td>
+          </tr>
+          <tr>
+            <th>商号</th>
+            <td>軽の森 (大阪府公安委員会 第 622312006339号)</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>2008年&ensp;7月</td>
+          </tr>
+          <tr>
+            <th>資本金</th>
+            <td>3000万円</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>吉田&ensp;宜史</td>
+          </tr>
+          <tr>
+            <th>従業員数</th>
+            <td>200名 (2020年6月現在)</td>
+          </tr>
+          <tr>
+            <th>売上高</th>
+            <td>73億円 (10期)</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>
+              全メーカーの新車販売､ 中古車販売<br>
+              自動車買取<br>
+              オートリース取扱､ 車検整備､ 板金塗装<br>
+              レッカー事業
+            </td>
+          </tr>
+        </table>
+        <div class="outline__details">
+          <a href="outline/index.html">詳細ページへ</a>
         </div>
-      </header>
-      <div class="container">
-        <div class="col__left">
-          <h2 class="outline__ttl"></h2>
-          <p class="outline__sub"></p>
-          <table>
-            <tr>
-              <th>会社名</th>
-              <td>株式会社&ensp;ヨシダオートサービス</td>
-            </tr>
-            <tr>
-              <th>商号</th>
-              <td>軽の森 (大阪府公安委員会 第 622312006339号)</td>
-            </tr>
-            <tr>
-              <th>設立</th>
-              <td>2008年&ensp;7月</td>
-            </tr>
-            <tr>
-              <th>資本金</th>
-              <td>3000万円</td>
-            </tr>
-            <tr>
-              <th>代表者</th>
-              <td>吉田&ensp;宜史</td>
-            </tr>
-            <tr>
-              <th>従業員数</th>
-              <td>200名 (2020年6月現在)</td>
-            </tr>
-            <tr>
-              <th>売上高</th>
-              <td>73億円 (10期)</td>
-            </tr>
-            <tr>
-              <th>事業内容</th>
-              <td>
-                全メーカーの新車販売､ 中古車販売<br>
-                自動車買取<br>
-                オートリース取扱､ 車検整備､ 板金塗装<br>
-                レッカー事業
-              </td>
-            </tr>
-          </table>
-          <button>
-            <p>詳細ページへ</p>
-          </button>
-        </div>
-        <div class="col__right">
-          <img src="common/img/top/outlineImg.png" alt="企業情報写真">
-        </div>
+      </div>
+      <div class="col__right is_effects">
+        <img src="common/img/top/outlineImg.png" alt="企業情報写真">
       </div>
       <div class="bg"></div>
     </section>
     <section class="branding">
-      <header class="header">
-        <div class="headerText">
-          <div class="headerText__ttl"></div>
-          <div class="headerText__sub"></div>
+      <div class="col__left is_effects">
+        <h2 class="branding__ttl"></h2>
+        <p class="branding__sub"></p>
+        <div class="brandIcon">
+          <img src="common/img/top/brandingIcon_01.png" alt="軽の森" class="brandIcon__img">
+          <img src="common/img/top/brandingIcon_02.png" alt="車の森" class="brandIcon__img">
+          <img src="common/img/top/brandingIcon_03.png" alt="軽パーク" class="brandIcon__img">
+          <img src="common/img/top/brandingIcon_04.png" alt="新車市場" class="brandIcon__img">
+          <img src="common/img/top/brandingIcon_05.png" alt="マッハ車検" class="brandIcon__img">
+          <img src="common/img/top/brandingIcon_06.png" alt="picars" class="brandIcon__img">
         </div>
-      </header>
-      <div class="container">
-        <div class="col__left">
-          <h2 class="branding__ttl"></h2>
-          <p class="branding__sub"></p>
-          <div class="brandIcon">
-            <img src="common/img/top/brandingIcon_01.png" alt="軽の森" class="brandIcon__img">
-            <img src="common/img/top/brandingIcon_02.png" alt="車の森" class="brandIcon__img">
-            <img src="common/img/top/brandingIcon_03.png" alt="軽パーク" class="brandIcon__img">
-            <img src="common/img/top/brandingIcon_04.png" alt="新車市場" class="brandIcon__img">
-            <img src="common/img/top/brandingIcon_05.png" alt="マッハ車検" class="brandIcon__img">
-            <img src="common/img/top/brandingIcon_06.png" alt="picars" class="brandIcon__img">
-          </div>
-          <button>
-            <p>詳細ページへ</p>
-          </button>
+        <div class="branding__details">
+          <a href="branding/index.html">詳細ページへ</a>
         </div>
-        <div class="col__right">
-          <img src="common/img/top/brandingImg_01.png" alt="事業紹介1" class="branding__img">
-          <img src="common/img/top/brandingImg_02.png" alt="事業紹介2" class="branding__img">
-        </div>
+      </div>
+      <div class="col__right is_effects">
+        <img src="common/img/top/brandingImg_01.png" alt="事業紹介1" class="branding__img">
+        <img src="common/img/top/brandingImg_02.png" alt="事業紹介2" class="branding__img">
       </div>
       <div class="bg"></div>
     </section>
     <section class="recruit">
-      <header class="header">
-        <div class="headerText">
-          <div class="headerText__ttl"></div>
-          <div class="headerText__sub"></div>
-        </div>
-      </header>
-      <div class="container">
-        <div class="col__left">
-          <h2 class="recruit__ttl"></h2>
-          <p class="recruit__sub"></p>
-          <p class="recruit__text">
-            ヨシダオートサービスの裏側を職種ごとにご紹介
-          </p>
-          <ul class="work">
-            <li class="box">
-              <p class="box__text">営業</p>
-              <i class="box__icon icon1"></i>
-            </li>
-            <li class="box">
-              <p class="box__text">自動車<br>整備士</p>
-              <i class="box__icon icon2">
-              </i>
-            </li>
-            <li class="box">
-              <p class="box__text">フロント</p>
-              <i class="box__icon icon3"></i>
-            </li>
-            <li class="box">
-              <p class="box__text">カスタマー<br>(営業事務)</p>
-              <i class="box__icon icon4">
-              </i>
-            </li>
-            <li class="box">
-              <p class="box__text">管理部<br>(本部)</p>
-              <i class="box__icon icon5"></i>
-            </li>
-            <li class="box">
-              <p class="box__text">保険部</p>
-              <i class="box__icon icon6"></i>
-            </li>
-          </ul>
-        </div>
-        <div class="col__right">
-          <img src="common/img/top/recruitImg.png" alt="採用情報画像">
-          <button>
-            <p>詳細ページへ</p>
-          </button>
+      <div class="col__left is_effects">
+        <h2 class="recruit__ttl"></h2>
+        <p class="recruit__sub"></p>
+        <p class="recruit__text">
+          ヨシダオートサービスの裏側を職種ごとにご紹介
+        </p>
+        <ul class="work">
+          <li class="work__box">
+            <p class="work__text">営業</p>
+            <i class="work__icon icon1"></i>
+          </li>
+          <li class="work__box">
+            <p class="work__text">自動車<br>整備士</p>
+            <i class="work__icon icon2">
+            </i>
+          </li>
+          <li class="work__box">
+            <p class="work__text">フロント</p>
+            <i class="work__icon icon3"></i>
+          </li>
+          <li class="work__box">
+            <p class="work__text">カスタマー<br>(営業事務)</p>
+            <i class="work__icon icon4">
+            </i>
+          </li>
+          <li class="work__box">
+            <p class="work__text">管理部<br>(本部)</p>
+            <i class="work__icon icon5"></i>
+          </li>
+          <li class="work__box">
+            <p class="work__text">保険部</p>
+            <i class="work__icon icon6"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="col__right is_effects">
+        <img src="common/img/top/recruitImg.png" alt="採用情報画像">
+        <div class="recruit__details">
+          <a href="">詳細ページへ</a>
         </div>
       </div>
       <div class="bg"></div>
     </section>
+    <div class="scroll scroll_bg01"></div>
+    <div class="scroll scroll_bg02"></div>
+    <div class="scroll scroll_bg03"></div>
+    <div class="scroll scroll_bg04"></div>
+    <div class="scroll scroll_bg05"></div>
   </main>
   <footer>
-    <img src="common/img/logoFooter.png" alt="ロゴ" class="icon">
+    <img src="common/img/logoFooter.png" alt="ロゴ" class="logo">
     <ul class="nav__list">
       <li class="nav__item">
         <a href="">
@@ -346,23 +324,22 @@
         </a>
       </li>
     </ul>
-      <ul class="social">
-        <li class="social__icon">
-          <i class="fa-brands fa-twitter"></i>
-        </li>
-        <li class="social__icon">
-          <i class="fa-brands fa-facebook-square"></i>
-        </li>
-      </ul>
-      <p class="privacy">プライバシーポリシー</p>
-      <p class="copyright">
-        ©YOSHIDA&ensp;AUTO&ensp;SERVICE&ensp;All&ensp;Rights&ensp;Reserved.
-      </p>
-      <a href="" class="toTop"></a>
+    <ul class="social">
+      <li class="social__icon">
+        <i class="social__twitter"></i>
+      </li>
+      <li class="social__icon">
+        <i class="social__facebook"></i>
+      </li>
+    </ul>
+    <p class="privacy">プライバシーポリシー</p>
+    <p class="copyright">
+      ©YOSHIDA&ensp;AUTO&ensp;SERVICE&ensp;All&ensp;Rights&ensp;Reserved.
+    </p>
+    <a href="#top" class="toTop"></a>
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="node_modules/rellax/rellax.min.js"></script>
-	<script src="common/js/main.js"></script>
-	<script src="top/js/main.js"></script>
+  <script src="common/js/main.js"></script>
+  <script src="top/js/main.js"></script>
 </body>
 </html>
