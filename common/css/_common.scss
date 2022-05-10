@@ -37,6 +37,7 @@ body {
   overflow-x: hidden;
   background: $mainColor;
   font-family: 'Yu Gothic','YuGothic','Noto Sans Japanese','Helvetica Neue','ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN',Arial,'Meiryo',sans-serif;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -44,7 +45,7 @@ body {
   width: 30px;
   height: 30px;
   position: fixed;
-  z-index: 2;
+  z-index: 6;
   top: 50%;
   transform: translateY(-50%);
   left: 30px;
@@ -92,7 +93,7 @@ body {
   text-align: center;
   font-size: 14px;
   color: $white;
-  z-index: 1;
+  z-index: 5;
   transform: translateX(-100%);
   transition: 1s;
   
@@ -101,11 +102,70 @@ body {
     margin: 45px 0 55px;
   }
 
-  .list__item a {
+  .list__item {
+    height: 22px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .list__text--1,
+  .list__text--2,
+  .list__text--3,
+  .list__text--4,
+  .list__text--5,
+  .list__text--6 {
+    width: 100px;
+    height: 22px;
     display: block;
-    width: 50px;
-    height: 50px;
-    // background: url(../../common/img/nav_home.png) no-repeat center center/cover;
+    margin: 0 auto;
+  }
+
+  .list__text--1 {
+    background: url(../../common/img/nav_home.png) no-repeat left center/contain;
+  }
+
+  .list__text--2 {
+    background: url(../../common/img/nav_news.png) no-repeat left center/contain;
+  }
+
+  .list__text--3 {
+    background: url(../../common/img/nav_greeting.png) no-repeat left center/contain;
+  }
+
+  .list__text--4 {
+    background: url(../../common/img/nav_outline.png) no-repeat left center/contain;
+  }
+
+  .list__text--5 {
+    background: url(../../common/img/nav_branding.png) no-repeat left center/contain;
+  }
+
+  .list__text--6 {
+    background: url(../../common/img/nav_recruit.png) no-repeat left center/contain;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 77px;
+    margin-bottom: 25px;
+
+    &__twitter,
+    &__facebook {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  
+    &__twitter {
+      background: url(../../common/img/social_twitter.png) no-repeat center center/contain;
+    }
+  
+    &__facebook {
+      background: url(../../common/img/social_facebook.png) no-repeat center center/contain;
+    }
   }
 
   .copyright {
@@ -145,12 +205,12 @@ button {
 
 footer {
   padding-top: 65px;
-  padding-bottom: 95px;
+  padding-bottom: 60px;
   text-align: center;
   background: $gray;
   color: $white;
 
-  .icon {
+  .logo {
     margin-bottom: 40px;
   }
 
@@ -201,15 +261,44 @@ footer {
     justify-content: center;
     gap: 25px;
     margin-bottom: 28px;
+
+    &__twitter,
+    &__facebook {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  
+    &__twitter {
+      background: url(../../common/img/social_twitter.png) no-repeat center center/contain;
+    }
+  
+    &__facebook {
+      background: url(../../common/img/social_facebook.png) no-repeat center center/contain;
+    }
   }
+
 
   .copyright {
     font-size: 11px;
   }
 
   .toTop {
-    border-right: 100px solid transparent;
-    border-bottom: 99px solid $white;
-    border-left: 100px solid transparent; 
+    position: relative;
+    border-right: 67px solid transparent;
+    border-bottom: 61px solid $white;
+    border-left: 67px solid transparent;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      border-top: 2px solid gray;
+      border-right: 2px solid gray;
+      transform: rotate(-45deg);
+      top: 50px;
+      left: -5px;
+    }
   }
 }
