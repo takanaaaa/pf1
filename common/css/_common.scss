@@ -188,7 +188,6 @@ body {
 button {
   width: 100%;
   position: relative;
-  display: block;
   height: 45px;
   margin: 0 auto;
   overflow: hidden;
@@ -202,7 +201,7 @@ button {
     transform: translateX(-100px);
   }
 
-  p {
+  a {
     position: absolute;
     top: 50%;
     left: 50%;
