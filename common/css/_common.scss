@@ -96,8 +96,9 @@ body {
 .nav {
   width: 420px;
   height: 100vh;
-  background: $gray;
   position: fixed;
+  top: 0;
+  background: $gray;
   text-align: center;
   font-size: 14px;
   color: $white;
@@ -291,6 +292,7 @@ footer {
 
   .copyright {
     font-size: 11px;
+    text-indent: 1em;
   }
 
   .toTop {
