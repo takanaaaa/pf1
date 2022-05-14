@@ -1,11 +1,4 @@
 @charset "UTF-8";
-.corporate .ttl::after, .history .ttl::after, .chart .ttl::after {
-  content: "";
-  height: 45px;
-  display: block;
-  background-image: repeating-linear-gradient(-45deg, #ea5413, #ea5413 0.6px, transparent 0, transparent 6.6px);
-}
-
 body {
   min-width: 1280px;
   overflow-x: hidden;
@@ -75,8 +68,9 @@ body::before {
 .nav {
   width: 420px;
   height: 100vh;
-  background: #808080;
   position: fixed;
+  top: 0;
+  background: #808080;
   text-align: center;
   font-size: 14px;
   color: #fff;
@@ -286,6 +280,7 @@ footer .social__facebook {
 
 footer .copyright {
   font-size: 11px;
+  text-indent: 1em;
 }
 
 footer .toTop {
@@ -311,6 +306,359 @@ footer .toTop::before {
 main {
   position: relative;
   padding: 210px 140px 230px 140px;
+}
+
+main .corporate {
+  position: relative;
+  padding-bottom: 128px;
+}
+
+main .corporate__ttl {
+  width: 235px;
+  height: 53px;
+  display: inline-block;
+  background: url(../../common/img/outline/ttl_01.png) no-repeat;
+  vertical-align: middle;
+}
+
+main .corporate__diagonalLine {
+  width: 750px;
+  height: 45px;
+  display: inline-block;
+  -webkit-transform: translateX(27px);
+          transform: translateX(27px);
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+main .corporate__diagonalLine::before {
+  content: "";
+  width: 850px;
+  height: 100%;
+  display: block;
+  background-image: url(../../common/img/diagonalLine.png);
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+main .corporate__subTtl {
+  position: absolute;
+  height: 15px;
+  width: 190px;
+  top: 18px;
+  left: 310px;
+  background: url(../../common/img/outline/subTtl_01.png) no-repeat;
+}
+
+main .corporate .logoBox {
+  position: absolute;
+  top: -80px;
+  right: -50px;
+  width: 513px;
+  padding-top: 60px;
+  padding-bottom: 32px;
+  background: #ea5413;
+  color: #fff;
+  text-align: center;
+}
+
+main .corporate .logoBox__img {
+  display: block;
+  margin: 0 auto 35px;
+}
+
+main .corporate .logoBox__btn {
+  width: 180px;
+  position: relative;
+  padding: 10px 35px;
+  border: 1px solid #fff;
+  font-family: "游ゴシック体";
+  font-size: 13px;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main .corporate .logoBox__btn::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 184px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main .corporate .logoBox__btn:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  color: #ea5413;
+  z-index: 2;
+}
+
+main .corporate .logoBox__btn:hover {
+  color: #ea5413;
+}
+
+main .corporate .logoBox__text {
+  position: relative;
+  z-index: 3;
+}
+
+main .modal {
+  display: none;
+  width: 890px;
+  padding: 63px 125px 86px;
+  background: #fffefd;
+  -webkit-box-shadow: 5px 5px 5px #beb4a6;
+          box-shadow: 5px 5px 5px #beb4a6;
+  text-align: center;
+  z-index: 3;
+}
+
+main .modal__close {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: 0 0 0 auto;
+}
+
+main .modal__close::before, main .modal__close::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #ea5413;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+main .modal__close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+main .modal__close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+main .modal__ttl {
+  height: 30px;
+  margin-bottom: 90px;
+  background: url(../../common/img/outline/modal_ttl.png) no-repeat center center/contain;
+}
+
+main .modal__img {
+  margin-bottom: 75px;
+}
+
+main .modal__text {
+  color: #ea5413;
+  font-family: "游ゴシック";
+  font-size: 14px;
+  line-height: 25px;
+  text-align: left;
+}
+
+main .modal.active {
+  display: block;
+  position: absolute;
+}
+
+main .outline {
+  margin-top: 40px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+main .outline th {
+  width: 100px;
+}
+
+main .outline tr:nth-of-type(-n + 7) td {
+  padding-bottom: 5px;
+}
+
+main .outline tr:nth-of-type(n + 7) td {
+  padding-bottom: 35px;
+}
+
+main .outline tr:nth-of-type(n + 12) td {
+  padding-bottom: 20px;
+}
+
+main .history {
+  position: relative;
+  padding-bottom: 130px;
+}
+
+main .history__ttl {
+  width: 115px;
+  height: 50px;
+  display: inline-block;
+  background: url(../../common/img/outline/ttl_02.png) no-repeat;
+  vertical-align: middle;
+}
+
+main .history__diagonalLine {
+  width: 825px;
+  height: 45px;
+  display: inline-block;
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+main .history__diagonalLine::before {
+  content: "";
+  width: 925px;
+  height: 100%;
+  display: block;
+  background-image: url(../../common/img/diagonalLine.png);
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+main .history__subTtl {
+  height: 19px;
+  width: 80px;
+  top: 13px;
+  margin: 0 0 0 auto;
+  background: url(../../common/img/outline/subTtl_02.png) no-repeat;
+  -webkit-transform: translate(-25px, -33px);
+          transform: translate(-25px, -33px);
+}
+
+main .history .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 585px 416px;
+      grid-template-columns: 585px 416px;
+}
+
+main .history .container .col__left {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+main .history__text {
+  margin-bottom: 60px;
+}
+
+main .history .timeline li {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .history .timeline__year {
+  color: #ea5413;
+  width: 50px;
+}
+
+main .history .timeline__year::after {
+  content: "";
+  width: 5px;
+  height: 55%;
+  background: #000;
+  position: absolute;
+  left: 10px;
+  top: 17px;
+}
+
+main .history:last-of-type .timeline__year::after {
+  display: none;
+}
+
+main .history__mon {
+  display: inline-block;
+  width: 50px;
+  text-align: end;
+}
+
+main .history__img:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+main .chart {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+main .chart__ttl {
+  width: 170px;
+  height: 50px;
+  display: inline-block;
+  background: url(../../common/img/outline/ttl_03.png) no-repeat;
+  vertical-align: middle;
+}
+
+main .chart__diagonalLine {
+  width: 750px;
+  height: 45px;
+  display: inline-block;
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+main .chart__diagonalLine::before {
+  content: "";
+  width: 850px;
+  height: 100%;
+  display: block;
+  background-image: url(../../common/img/diagonalLine.png);
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+main .chart__subTtl {
+  width: 200px;
+  height: 15px;
+  margin: 0 0 0 auto;
+  background: url(../../common/img/outline/subTtl_03.png) no-repeat;
+  -webkit-transform: translate(-25px, -33px);
+          transform: translate(-25px, -33px);
+}
+
+main .chart .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  gap: 60px;
+}
+
+main .chart__graph {
+  width: 510px;
+  height: 505px;
+  background-image: url(../../common/img/outline/graph.png);
+  background-size: contain;
+}
+
+main .chart::after {
+  content: "";
+  width: 100vw;
+  height: 405px;
+  position: absolute;
+  top: 20%;
+  right: -14%;
+  background-color: rgba(234, 85, 20, 0.1);
+  z-index: -1;
 }
 
 main .bg1,
@@ -344,246 +692,5 @@ main::before {
   top: 0;
   right: 0;
   background-color: rgba(234, 85, 20, 0.1);
-}
-
-.logoBox {
-  position: absolute;
-  top: -80px;
-  right: -50px;
-  width: 513px;
-  padding-top: 60px;
-  padding-bottom: 32px;
-  background: #ea5413;
-  color: #fff;
-  text-align: center;
-}
-
-.logoBox .logoBox__img {
-  display: block;
-  margin: 0 auto 35px;
-}
-
-.logoBox button {
-  position: relative;
-  padding: 10px 40px;
-  border: 1px solid #fff;
-  font-family: "游ゴシック体";
-  font-size: 13px;
-  overflow: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.logoBox button::before {
-  content: "";
-  position: absolute;
-  background: #fff;
-  width: 184px;
-  height: 36.95px;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.logoBox button:hover:before {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  color: #ea5413;
-  z-index: 2;
-}
-
-.logoBox button p {
-  position: relative;
-  z-index: 3;
-}
-
-.logoBox button:hover {
-  color: #ea5413;
-}
-
-.corporate {
-  position: relative;
-  padding-bottom: 128px;
-}
-
-.corporate .ttl {
-  height: 50px;
-  background: url(../../common/img/outline/ttl_01.png) no-repeat;
-  margin-bottom: 40px;
-}
-
-.corporate .ttl::after {
-  width: 750px;
-  -webkit-transform: translateX(250px);
-          transform: translateX(250px);
-}
-
-.corporate .subTtl {
-  position: absolute;
-  height: 15px;
-  width: 190px;
-  top: 13px;
-  left: 310px;
-  background: url(../../common/img/outline/subTtl_01.png) no-repeat;
-}
-
-.modal {
-  display: none;
-  width: 890px;
-  padding: 63px 125px 86px;
-  background: #fffefd;
-  -webkit-box-shadow: 5px 5px 5px #beb4a6;
-          box-shadow: 5px 5px 5px #beb4a6;
-}
-
-.modal .modal__text {
-  color: #ea5413;
-  font-family: "游ゴシック";
-  font-size: 14px;
-  line-height: 25px;
-}
-
-.outline {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.outline th {
-  width: 100px;
-}
-
-.outline tr:nth-of-type(-n + 7) td {
-  padding-bottom: 5px;
-}
-
-.outline tr:nth-of-type(n + 7) td {
-  padding-bottom: 35px;
-}
-
-.outline tr:nth-of-type(n + 12) td {
-  padding-bottom: 20px;
-}
-
-.history {
-  position: relative;
-  padding-bottom: 130px;
-}
-
-.history .ttl {
-  height: 50px;
-  background: url(../../common/img/outline/ttl_02.png) no-repeat;
-  margin-bottom: 35px;
-}
-
-.history .ttl::after {
-  width: 830px;
-  -webkit-transform: translateX(170px);
-          transform: translateX(170px);
-}
-
-.history .subTtl {
-  position: absolute;
-  height: 19px;
-  width: 80px;
-  top: 13px;
-  right: 25px;
-  background: url(../../common/img/outline/subTtl_02.png) no-repeat;
-}
-
-.history .container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 585px 416px;
-      grid-template-columns: 585px 416px;
-}
-
-.history .container .box {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.history .container .box .history__text {
-  margin-bottom: 60px;
-}
-
-.history .container .historyImg:not(:last-of-type) {
-  margin-bottom: 25px;
-}
-
-.chart {
-  position: relative;
-  padding-bottom: 100px;
-}
-
-.chart .ttl {
-  height: 50px;
-  background: url(../../common/img/outline/ttl_03.png) no-repeat;
-  margin-bottom: 40px;
-}
-
-.chart .ttl::after {
-  width: 750px;
-  -webkit-transform: translateX(250px);
-          transform: translateX(250px);
-}
-
-.chart .subTtl {
-  position: absolute;
-  height: 15px;
-  width: 200px;
-  top: 13px;
-  right: 25px;
-  background: url(../../common/img/outline/subTtl_03.png) no-repeat;
-}
-
-.chart .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 60px;
-}
-
-.chart .container .graph {
-  width: 510px;
-  height: 505px;
-  background-image: url(../../common/img/outline/graph.png);
-  background-size: contain;
-}
-
-.timeline li {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.timeline li .timeline__year {
-  color: #ea5413;
-  width: 50px;
-}
-
-.timeline li .timeline__year::after {
-  content: "";
-  width: 5px;
-  height: 55%;
-  background: #000;
-  position: absolute;
-  left: 10px;
-  top: 17px;
-}
-
-.timeline li:last-of-type .timeline__year::after {
-  display: none;
-}
-
-.timeline li .timeline__mon {
-  display: inline-block;
-  width: 50px;
-  text-align: end;
 }
 /*# sourceMappingURL=style.css.map */

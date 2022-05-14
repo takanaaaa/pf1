@@ -75,8 +75,9 @@ body::before {
 .nav {
   width: 420px;
   height: 100vh;
-  background: #808080;
   position: fixed;
+  top: 0;
+  background: #808080;
   text-align: center;
   font-size: 14px;
   color: #fff;
@@ -286,6 +287,7 @@ footer .social__facebook {
 
 footer .copyright {
   font-size: 11px;
+  text-indent: 1em;
 }
 
 footer .toTop {
