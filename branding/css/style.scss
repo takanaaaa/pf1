@@ -7,6 +7,452 @@ main {
   font-weight: bold;
   font-size: 13px;
 
+  .service {
+    position: relative;
+    padding-bottom: 125px;
+
+    &__heading {
+      position: relative;
+      margin-bottom: 57px;
+    }
+
+    &__ttl {
+      @extend %headerTtl-style;
+      width: 235px;
+      background: url(../../common/img/branding/ttl_01.png) no-repeat;
+    }
+
+    &__diagonalLine {
+      @extend %diagonalLine-style;
+      width: 715px;
+      transform: translateX(50px);
+
+      &::before {
+        width: 815px;
+      }
+    }
+  
+    &__subTtl {
+      @extend %headerSubTtl-style;
+      width: 77px;
+      right: 25px;
+      background: url(../../common/img/branding/subTtl_01.png) no-repeat;
+    }
+  
+    &__text {
+      margin: 57px 0 55px 0;
+    }
+    
+    ul {
+    display: grid;
+    grid-template-columns: repeat(2, 485px);
+    gap: 35px;
+    
+      .serviceBox {
+        padding: 20px 30px;
+        border: 1px solid $orange;
+        position: relative;
+        display: flex;
+        gap: 25px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .5;
+        }
+        
+        &__logo {
+          position: absolute;
+          top: -20px;
+          background: $mainColor;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  .domain {
+    position: relative;
+    padding-bottom: 120px;
+
+    &__heading {
+      position: relative;
+      margin-bottom: 40px;
+    }
+  
+    &__ttl {
+      @extend %headerTtl-style;
+      width: 230px;
+      background: url(../../common/img/branding/ttl_02.png) no-repeat center left/contain;
+    }
+
+    &__diagonalLine {
+      @extend %diagonalLine-style;
+      width: 680px;
+      transform: translateX(30px);
+
+      &::before {
+        width: 780px;
+      }
+    }
+  
+    &__subTtl {
+      @extend %headerSubTtl-style;
+      width: 77px;
+      right: 355px;
+      background: url(../../common/img/branding/subTtl_02.png) no-repeat;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+  
+    img {
+      position: absolute;
+      right: -140px;
+      top: -20px;
+    }
+    
+    &__boxes {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 45px;
+      text-align: center;
+
+      &::after {
+        content: "";
+        width: 450px;
+        height: 180px;
+        position: absolute;
+        top: 38%;
+        left: 50px;
+        font-size: 12px;
+        border: 15px solid rgba(234,85,20,.1);
+        z-index: -1;
+      }
+    }
+
+    &__box {
+      display: flex;
+      position: relative;
+      height: 100px;
+      border-radius: 50px;
+      border: 1px solid #000;
+      align-items: center;
+      justify-content: center;
+      background-color: $mainColor;
+
+    }
+
+    .active {
+      border: none;
+      color: $white;
+      background-color: $orange;
+      
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        animation: 10s linear infinite rotation;
+        background: url(../../common/img/branding/domainBox_round.png) no-repeat center center/contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 426px;
+      height: 363px;
+      background-color: rgba(234,85,20,.1);
+      position: absolute;
+      top: 0;
+      right: -140px;
+      z-index: -1;
+    }
+  }
+
+  .shops {
+    position: relative;
+    
+    &__heading {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    &__ttl {
+      @extend %headerTtl-style;
+      width: 235px;
+      background: url(../../common/img/branding/ttl_03.png) no-repeat center left/contain;
+    }
+    
+    &__diagonalLine {
+      @extend %diagonalLine-style;
+      width: 750px;
+      transform: translateX(20px);
+      
+      &::before {
+        width: 850px;
+      }
+    }
+    
+    &__subTtl {
+      @extend %headerSubTtl-style;
+      height: 19px;
+      width: 77px;
+      right: 25px;
+      background: url(../../common/img/branding/subTtl_03.png) no-repeat;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 110px;
+      margin-bottom: 200px;
+    }
+
+    .shopsBox {
+      position: relative;
+      padding: 35px 15px 25px;
+      margin-bottom: auto;
+      border: 2px solid $orange;
+
+      &__ttl {
+        position: absolute;
+        padding: 0 15px;
+        top: -14%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $mainColor;
+      }
+
+      &__name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      &__address {
+        text-decoration: underline;
+      }
+
+      &__btn {
+        display: inline-block;
+        position: relative;
+        width: 130px;
+        margin: 15px 13px 15px 0;
+        padding: 5px 10px 5px 40px;;
+        border: 1px solid #000;
+        text-align: center;
+        font-size: 12px;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background: $orange;
+          width:130px;
+          height: 30px;
+          top: 0;
+          left: 0;
+          transform: translateX(-100%);
+          transition: 1s;
+        }
+
+        &:hover {
+          color: $white;
+          border: none;
+
+          & .shopsBox__icon {
+            filter: invert(1);
+          }
+
+          &:before {
+            transform: translateX(0);
+            z-index: -1;
+          }
+        }
+      }
+
+      &__text {
+        width: 100%;
+        padding: 5px 0;
+        z-index: 3;
+        transform: 1s;
+
+        &::after {
+          content: "ー＞";
+          margin-left: 0.5em;
+        }
+      }
+
+      &__icon {
+        width: 12px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        transition: 1s;
+
+        &.icon1 {
+          background: url(../../common/img/branding/shopsIcon_01.png) no-repeat center center/contain;
+        }
+
+        &.icon2 {
+          background: url(../../common/img/branding/shopsIcon_02.png) no-repeat center center /contain;
+        }
+      }
+
+      &__imgs {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(4, 63px);
+      }
+
+      &__img {
+        width: 63px;
+      }
+    }
+    
+    ul {
+      width: 263px;
+      font-size: 12px;
+
+      li {
+        border-bottom: 1px dotted #000;
+
+        &.loop {
+          width: 100%;
+          height: 39px;
+          color: $orange;
+          background: url(../../common/img/diagonalLine.png) repeat-x;
+          background-position: 400px 0;
+          animation: 4s linear infinite loopBg;
+        }
+
+        a {
+          display: block;
+          position: relative;
+          padding: 10px 0 10px 20px;
+
+          &::after {
+            content: "＞";
+            position: absolute;
+            right: 20px;
+          }
+
+          &:hover {
+            color: $orange;
+            background: url(../../common/img/diagonalLine.png) no-repeat center center/auto;
+          }
+        }
+      }
+    }
+
+    .bg {
+      position: absolute;
+      width: 440px;
+      height: 630px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url(../../common/img/branding/shops_bg.png) no-repeat center center/contain;
+      z-index: -1;
+
+      &__circle--1 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        margin: auto;
+        top: 24%;
+        left: 38%;
+        bottom: 0;
+        right: 5%;
+        border-radius: 35px;
+        background-color: $orange;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 70px;
+          height: 70px;
+          animation: 10s linear infinite rotation;
+          background: url(../../common/img/branding/domainBox_round.png) no-repeat center center/contain;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background-color: rgba(255,100,0,.1);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          bottom: 0;
+          right: 0;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &__circle--2,
+      &__circle--3,
+      &__circle--4 {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        left: 0;
+        bottom: 0;
+        border-radius: 25px;
+        background-color: rgba(243,130,0,.3);
+        position: absolute;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background-color: rgba(255,100,0,.1);
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          animation: 2s cubic-bezier(0, 0.61, 1, 1) infinite scale;
+        }
+      }
+
+      &__circle--2 {
+        top: 11%;
+        right: -17%;
+        margin: auto;
+      }
+
+      &__circle--3 {
+        top: 41%;
+        right: -18%;
+        margin: auto;
+      }
+
+      &__circle--4 {
+        top: 33%;
+        left: 52%;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+
   .bg1,
   .bg2 {
     position: absolute;
@@ -31,226 +477,31 @@ main {
   }
 }
 
-.service {
-  position: relative;
-  padding-bottom: 125px;
-
-  .ttl {
-    height: 55px;
-    background: url(../../common/img/branding/ttl_01.png) no-repeat;
-    margin-bottom: 40px;
-
-    &::after {
-      @extend %diagonalLine-style;
-      width: 750px;
-      transform: translateX(250px);
-    }
+@keyframes rotation {
+  0% { 
+    transform:scale(1.3) rotate(360deg);
   }
-
-  .subTtl {
-    position: absolute;
-    height: 15px;
-    width: 77px;
-    top: 13px;
-    right: 20px;
-    background: url(../../common/img/branding/subTtl_01.png) no-repeat;
+  100% {
+    transform:scale(1.3) rotate(0deg); 
   }
-
-  .container {
-    margin-top: 57px;
-  
-    ul {
-     display: grid;
-     grid-template-columns: repeat(2, 485px);
-     gap: 35px;
-   
-     .serviceBox {
-       padding: 20px 30px;
-       border: 1px solid $orange;
-       position: relative;
-       display: flex;
-       gap: 25px;
-   
-       .serviceBox__logo {
-         position: absolute;
-         top: -20px;
-         background: $mainColor;
-         padding: 0 10px;
-       }
-     }
-    }
+}
+@keyframes scale {
+  0% {
+    transform:scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform:scale(5); 
+    opacity: 0;
   }
 }
 
-
-.domain {
-  position: relative;
-  padding-bottom: 120px;
-
-  header {
-    margin-bottom: 40px;
+@keyframes loopBg {
+  0% {
+    background-position: 400px 0;
   }
 
-  .ttl {
-    height: 55px;
-    background: url(../../common/img/branding/ttl_02.png) no-repeat;
-    margin-bottom: 40px;
-
-    &::after {
-      @extend %diagonalLine-style;
-      width: 680px;
-      transform: translateX(320px);
-    }
-  }
-
-  .subTtl {
-    position: absolute;
-    height: 15px;
-    width: 77px;
-    top: 13px;
-    left: 560px;
-    background: url(../../common/img/branding/subTtl_02.png) no-repeat;
-  }
-
-  img {
-    position: absolute;
-    right: -140px;
-    top: -20px;
-  }
-
-  &__boxes {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 45px;
-
-    &::after {
-      content: "";
-      width: 450px;
-      height: 180px;
-      position: absolute;
-      top: 38%;
-      left: 50px;
-      font-size: 12px;
-      border: 15px solid rgba(234,85,20,.1);
-      z-index: -1;
-    }
-  }
-
-  &__box {
-    display: flex;
-    height: 100px;
-    border-radius: 50px;
-    border: 1px solid #000;
-    align-items: center;
-    justify-content: center;
-    background-color: $mainColor;
-  }
-
-  &::before {
-    content: "";
-    width: 426px;
-    height: 363px;
-    background-color: rgba(234,85,20,.1);
-    position: absolute;
-    top: 0;
-    right: -140px;
-    z-index: -1;
-  }
-}
-
-.shops {
-  position: relative;
-
-  .ttl {
-    width: 235px;
-    height: 55px;
-    background: url(../../common/img/branding/ttl_03.png) no-repeat center/contain;
-    margin-bottom: 40px;
-
-    &::after {
-      @extend %diagonalLine-style;
-      width: 750px;
-      transform: translateX(250px);
-    }
-  }
-
-  .subTtl {
-    position: absolute;
-    height: 15px;
-    width: 77px;
-    top: 13px;
-    right: 20px;
-    background: url(../../common/img/branding/subTtl_03.png) no-repeat;
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 110px;
-    margin-bottom: 200px;
-
-    .shopsBox {
-      position: relative;
-      padding: 35px 15px 25px;
-      position: relative;
-      border: 2px solid #ea5514;
-
-      &__ttl {
-        position: absolute;
-        padding: 0 15px;
-        top: -14%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $mainColor;
-      }
-
-      &__name {
-        font-size: 18px;
-        font-weight: bold;
-      }
-
-      &__address {
-        text-decoration: underline;
-      }
-
-      &__btn {
-        display: inline-block;
-        width: 130px;
-        margin: 15px 13px 15px 0;
-        position: relative;
-        border: 1px solid #000;
-        text-align: center;
-
-        a {
-          width: 100%;
-          padding: 5px 0;
-        }
-      }
-    }
-
-    ul {
-      font-size: 12px;
-
-      li {
-        padding: 10px 0;
-        border-bottom: 1px dotted #000;
-
-        a {
-          padding: 10px 0 10px 20px;
-        }
-      }
-    }
-  }
-
-
-  .bg {
-    position: absolute;
-    width: 440px;
-    height: 630px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: url(../../common/img/branding/shopsBg_06.png) no-repeat center center/contain;
-    z-index: -1;
+  100% {
+    background-position: 544px 0;
   }
 }
