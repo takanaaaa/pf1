@@ -6,30 +6,32 @@ $orange: #ea5413;
 $gray: #808080;
 
 %headerTtl-style {
-  position: absolute;
-  background: no-repeat;
-  top: 50%;
-  transform: translateY(-50%);
-  background-size: contain;
+  position: relative;
+  height: 55px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 %headerSubTtl-style {
-  content: "";
   position: absolute;
-  height: 20px;
-  width: 55px;
-  background: no-repeat;
+  height: 15px;
   top: 50%;
   transform: translateY(-50%);
-  right: 165px;
-  background-size: contain;
 }
 
 %diagonalLine-style {
-  content: "";
   height: 45px;
-  display: block;
-  background-image: repeating-linear-gradient(-45deg, $orange, $orange .6px, transparent 0, transparent 6.6px);
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+
+  &::before {
+    content: "";
+    height: 100%;
+    display: block;
+    background-image: url(../../common/img/diagonalLine.png);
+    transform: translateX(-100px);
+  }
 }
 
 body {
@@ -179,6 +181,7 @@ body {
 
   .copyright {
     font-size: 11px;
+    text-indent: 1;
   }
 
   &.in {
