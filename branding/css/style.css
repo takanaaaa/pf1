@@ -68,29 +68,29 @@ body::before {
   transition: 1s;
 }
 
-.line2 {
+.hamburger .line2 {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.line3 {
+.hamburger .line3 {
   bottom: 0;
 }
 
-.line_1,
-.line_2,
-.line_3 {
+.hamburger .line_1,
+.hamburger .line_2,
+.hamburger .line_3 {
   background-color: #fff;
 }
 
-.line_1 {
+.hamburger .line_1 {
   width: 60%;
   -webkit-transform: translateY(5px) rotate(-45deg);
           transform: translateY(5px) rotate(-45deg);
 }
 
-.line_3 {
+.hamburger .line_3 {
   width: 60%;
   -webkit-transform: translateY(-5px) rotate(45deg);
           transform: translateY(-5px) rotate(45deg);
@@ -123,6 +123,30 @@ body::before {
 
 .nav .list__item:not(:last-of-type) {
   margin-bottom: 35px;
+}
+
+.nav .list__item a {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav .list__item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #ea5413;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.nav .list__item a:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .nav .list__text--1,
