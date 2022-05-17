@@ -61,40 +61,42 @@ body {
   transform: translateY(-50%);
   left: 30px;
   cursor: pointer;
+  
+  &__line {
+    background-color: $orange;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    transition: 1s;
+  }
+
+  .line2 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .line3 {
+    bottom: 0;
+  }
+  
+  .line_1,
+  .line_2,
+  .line_3 {
+    background-color: $white;
+  }
+  
+  .line_1 {
+    width: 60%;
+    transform: translateY(5px) rotate(-45deg);
+  }
+  
+  .line_3 {
+    width: 60%;
+    transform: translateY(-5px) rotate(45deg);
+  }
 }
 
-.hamburger__line {
-  background-color: $orange;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  transition: 1s;
-}
 
-.line2 {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.line3 {
-  bottom: 0;
-}
-
-.line_1,
-.line_2,
-.line_3 {
-  background-color: $white;
-}
-
-.line_1 {
-  width: 60%;
-  transform: translateY(5px) rotate(-45deg);
-}
-
-.line_3 {
-  width: 60%;
-  transform: translateY(-5px) rotate(45deg);
-}
 
 .nav {
   width: 420px;
@@ -119,6 +121,26 @@ body {
 
     &:not(:last-of-type) {
       margin-bottom: 35px;
+    }
+
+    a {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-color: $orange;
+        left: 0;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        transition: .1s;
+      }
+      &:hover:before {
+        transform: translateX(0);
+      }
     }
   }
 
@@ -157,6 +179,7 @@ body {
   .list__text--6 {
     background: url(../../common/img/nav_recruit.png) no-repeat left center/contain;
   }
+
   .social {
     display: flex;
     justify-content: center;
