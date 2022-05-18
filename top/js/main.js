@@ -15,11 +15,21 @@ $(function(){
       }
     });
 
-    $('.is_effects').each(function(){
-      let position = $(this).offset().top;
-      console.log(position);
-      if(scroll > position - windowHeight + 400){
-        $(this).addClass("fadeIn");
+    $('.scroll-effect').each(function(){
+      let position = $(this).offset().top
+      let windowHeight = $(window).height();
+      let container = $(this)
+      if(scroll > position - windowHeight * 0.5){
+        container.find('.scroll-item1').each(function(index){
+          $(this).delay(index * 300).queue(function(){
+            $(this).addClass('fadeIn');
+          });
+        });
+        container.find('.scroll-item2').each(function(index){
+          $(this).delay(index * 500).queue(function(){
+            $(this).addClass('fadeIn');
+          });
+        });
       }
     });
   });

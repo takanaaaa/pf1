@@ -186,6 +186,7 @@ body {
     gap: 25px;
     margin-top: 77px;
     margin-bottom: 25px;
+    cursor: pointer;
 
     &__twitter,
     &__facebook {
@@ -299,11 +300,12 @@ footer {
     justify-content: center;
     gap: 25px;
     margin-bottom: 28px;
+    cursor: pointer;
 
     &__twitter,
     &__facebook {
       display: block;
-      width: 30px;
+      width: 60px;
       height: 30px;
     }
   

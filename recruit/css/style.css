@@ -195,6 +195,7 @@ body::before {
   gap: 25px;
   margin-top: 77px;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 .nav .social__twitter, .nav .social__facebook {
@@ -318,11 +319,12 @@ footer .social {
           justify-content: center;
   gap: 25px;
   margin-bottom: 28px;
+  cursor: pointer;
 }
 
 footer .social__twitter, footer .social__facebook {
   display: block;
-  width: 30px;
+  width: 60px;
   height: 30px;
 }
 
