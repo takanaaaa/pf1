@@ -373,109 +373,29 @@ main .subTtl {
           transform: translate(-25px, -33px);
 }
 
-main .cards {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-grid-columns: (336px)[3];
-      grid-template-columns: repeat(3, 336px);
-  gap: 20px;
-  margin-bottom: 35px;
+main .newsShow {
+  padding: 105px 0 115px 0;
 }
 
-main .cards .box {
-  border-bottom: 1px dotted;
+main .newsShow__img {
+  width: 100%;
+  height: 650px;
+  margin-bottom: 50px;
+  background-color: #fff;
 }
 
-main .cards .newsCard {
-  border-bottom: 1px dotted;
-  padding: 18px;
-  position: relative;
-  cursor: pointer;
+main .newsShow__ttl {
+  margin-bottom: 30px;
+  font-size: 1.5em;
 }
 
-main .cards .newsCard::before, main .cards .newsCard::after {
-  content: "";
-  position: absolute;
-  height: 0;
-  width: 0;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
+main .newsShow__text {
+  line-height: 2.5;
 }
 
-main .cards .newsCard::before {
-  left: 0;
-  top: 0;
-  border-left: 3px solid #ea5413;
-  border-top: 3px solid #ea5413;
-}
-
-main .cards .newsCard::after {
-  right: 0;
-  bottom: 0;
-  margin-bottom: 18px;
-  border-right: 3px solid #ea5413;
-  border-bottom: 3px solid #ea5413;
-}
-
-main .cards .newsCard:hover::before, main .cards .newsCard:hover::after {
-  height: 5em;
-  width: 5em;
-  opacity: 1;
-}
-
-main .cards .newsCard__img {
-  width: 300px;
-  height: 195px;
-  margin-bottom: 15px;
-  background: #fff;
-}
-
-main .cards .newsCard:nth-of-type(3n-1) .newsCard__img {
-  height: 330px;
-}
-
-main .cards .newsCard__date {
-  font-size: smaller;
-}
-
-main .cards .newsCard__ttl {
-  display: inline-block;
-  padding: 0 5px;
-  background-color: #ea5413;
-  color: #fff;
-}
-
-main .cards .newsCard__text {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-main .cards .newsCard__more {
-  margin-top: 10px;
-  margin-bottom: 18px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #ea5413;
-  text-align: end;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-main .cards .newsCard__more::before {
-  content: "ー＞";
-  margin-right: 0.5em;
-}
-
-main .cards .newsCard:hover .newsCard__more {
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
+main .newsShow__text > span {
+  display: block;
+  margin-top: 65px;
 }
 
 main .bg {

@@ -15,7 +15,7 @@ main {
   }
 
   .diagonalLine {
-    width: 740px;
+    width: 743px;
     height: 45px;
     display: inline-block;
     transform: translateX(22px);
@@ -24,7 +24,7 @@ main {
 
     &::before {
       content: "";
-      width: 840px;
+      width: 843px;
       height: 100%;
       display: block;
       background-image: url(../../common/img/diagonalLine.png);
