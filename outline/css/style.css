@@ -571,6 +571,7 @@ main .history .container {
   display: grid;
   -ms-grid-columns: 585px 416px;
       grid-template-columns: 585px 416px;
+  margin-top: 35px;
 }
 
 main .history .container .col__left {
@@ -593,7 +594,7 @@ main .history .timeline li {
 
 main .history .timeline__year {
   color: #ea5413;
-  width: 50px;
+  width: 25px;
 }
 
 main .history .timeline__year::after {
@@ -606,14 +607,15 @@ main .history .timeline__year::after {
   top: 17px;
 }
 
-main .history:last-of-type .timeline__year::after {
-  display: none;
-}
-
-main .history__mon {
+main .history .timeline__mon {
   display: inline-block;
   width: 50px;
+  margin-right: 20px;
   text-align: end;
+}
+
+main .history:last-of-type .timeline__year::after {
+  display: none;
 }
 
 main .history__img:not(:last-of-type) {

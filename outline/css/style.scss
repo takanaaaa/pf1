@@ -203,7 +203,6 @@ main {
       display: inline-block;
       background: url(../../common/img/outline/ttl_02.png) no-repeat;
       vertical-align: middle;
-      // margin-bottom: 35px;
     }
 
     &__diagonalLine {
@@ -236,6 +235,7 @@ main {
     .container {
       display: grid;
       grid-template-columns: 585px 416px;
+      margin-top: 35px;
       
       .col__left {
         font-size: 13px;
@@ -247,36 +247,39 @@ main {
       margin-bottom: 60px;
     }
 
-    .timeline li {
-      position: relative;
-      overflow: hidden;
-      padding-bottom: 12px;
-      display: flex;
-    }
+    .timeline {
+      li {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 12px;
+        display: flex;
+      }
+  
+      &__year {
+        color: $orange;
+        width: 25px;
+        
+        &::after {
+          content: "";
+          width: 5px;
+          height: 55%;
+          background: #000;
+          position: absolute;
+          left: 10px;
+          top: 17px;
+        }
+      }
 
-    .timeline__year {
-      color: $orange;
-      width: 50px;
-      
-      &::after {
-        content: "";
-        width: 5px;
-        height: 55%;
-        background: #000;
-        position: absolute;
-        left: 10px;
-        top: 17px;
+      &__mon {
+        display: inline-block;
+        width: 50px;
+        margin-right: 20px;
+        text-align: end;
       }
     }
-  
+    
     &:last-of-type .timeline__year::after {
       display: none;
-    }
-    
-    &__mon {
-      display: inline-block;
-      width: 50px;
-      text-align: end;
     }
     
     &__img:not(:last-of-type) {

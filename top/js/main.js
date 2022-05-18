@@ -26,7 +26,7 @@ $(function(){
           });
         });
         container.find('.scroll-item2').each(function(index){
-          $(this).delay(index * 500).queue(function(){
+          $(this).delay(index * 300).queue(function(){
             $(this).addClass('fadeIn');
           });
         });
